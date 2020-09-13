@@ -1,0 +1,174 @@
+html {
+  background-color: $white;
+}
+
+figure {
+  margin: 0;
+}
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: $white;
+  font-size: 14px;
+  //max-width: 1920px;
+  margin: 0 auto;
+  @media (max-width: 768px) {
+    &.shadow {
+      &:before {
+        background-color: rgba(0, 0, 0, 0.2);
+        position: fixed;
+        z-index: 99;
+        content: " ";
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        //pointer-events: none;
+      }
+    }
+  }
+
+  &.disable-scroll {
+    @media (max-width: 1023px) {
+      overflow-y: hidden;
+    }
+  }
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+@import "elements/icons";
+@import "elements/card";
+
+@import "elements/faq";
+@import "elements/qr";
+
+// @import "elements/nav";
+// @import "elements/radio";
+// @import "elements/menu";
+
+@import "elements/add_info";
+@import "elements/banner";
+// @import "elements/dropdown";
+// @import "elements/checkbox";
+//удалить потом
+@import "elements/list";
+@import "elements/group_horizontal";
+@import "elements/tooltip";
+@import "elements/multisearch";
+// @import "elements/text";
+@import "elements/social";
+@import "elements/illness";
+
+// @import "elements/select";
+@import "elements/skills";
+
+@import "elements/articles";
+@import "elements/form";
+@import "elements/scrollbar";
+
+@import "elements/label";
+@import "elements/breadcrumbs";
+@import "partials/header";
+@import "partials/chocopartners";
+@import "layouts/base";
+@import "layouts/profile";
+@import "layouts/with_sidebar";
+@import "components/banners/base";
+@import "components/share";
+@import "components/gallery/medcenters";
+@import "components/reviews/base";
+@import "components/cards/profile/base";
+@import "components/cards/profile/medcenter";
+@import "components/search/list";
+@import "components/search/item";
+@import "components/search/filters";
+@import "components/doctors/view";
+@import "components/medcenters/view";
+@import "components/doctors/feedback";
+@import "components/tabs/base";
+@import "components/menu/base";
+@import "components/mainpage/base";
+@import "components/pages/base";
+@import "components/services/base";
+@import "components/sliders/base";
+@import "components/forms/base";
+@import "components/modal/base";
+@import "components/phones/base";
+@import "components/dialogs/base";
+@import "components/toogle/base";
+@import "components/maps/base";
+@import "components/search/single-autocomplete";
+
+@import "components/search/search";
+
+@import "pages/main";
+
+
+@import "modules/errors/main";
+
+// :root {
+//   --val: 0;
+//   --min: 0;
+//   --max: 0;
+// }
+//проверено 
+@import "../../../node_modules/idoctor.kz-library/src/assets/scss/elements/rating";
+@import "../../../node_modules/idoctor.kz-library/src/assets/scss/elements/btn";
+@import "../../../node_modules/idoctor.kz-library/src/assets/scss/elements/avatar";
+@import "../../../node_modules/idoctor.kz-library/src/assets/scss/elements/input";
+@import "../../../node_modules/idoctor.kz-library/src/assets/scss/elements/link";
+@import "../../../node_modules/idoctor.kz-library/src/assets/scss/elements/tag";
+@import "../../../node_modules/idoctor.kz-library/src/assets/scss/elements/textarea";
+@import "../../../node_modules/idoctor.kz-library/src/assets/scss/elements/icon_btn";
+@import "../../../node_modules/idoctor.kz-library/src/assets/scss/elements/list";
+@import "../../../node_modules/idoctor.kz-library/src/assets/scss/elements/heading";
+@import "../../../node_modules/idoctor.kz-library/src/assets/scss/elements/text";
+@import "../../../node_modules/idoctor.kz-library/src/assets/scss/elements/range";
+@import "../../../node_modules/idoctor.kz-library/src/assets/scss/elements/pagination";
+@import "../../../node_modules/idoctor.kz-library/src/assets/scss/elements/hotspot";
+//partials
+@import "../../../node_modules/idoctor.kz-library/src/assets/scss/partials/header";
+@import "../../../node_modules/idoctor.kz-library/src/assets/scss/partials/footer";
+@import "../../../node_modules/idoctor.kz-library/src/assets/scss/partials/choco_partners";
+//в обработке 
+
+
+@import "../../../node_modules/idoctor.kz-library/src/assets/scss/elements/select";
+@import "../../../node_modules/idoctor.kz-library/src/assets/scss/elements/select_search";
+// @import "../../../node_modules/idoctor.kz-library/src/assets/scss/elements/loader";
+@import "../../../node_modules/idoctor.kz-library/src/assets/scss/elements/pagination";
+// @import "../../../node_modules/idoctor.kz-library/src/assets/scss/elements/radio";
+// @import "../../../node_modules/idoctor.kz-library/src/assets/scss/elements/checkbox";
+// @import "../../../node_modules/idoctor.kz-library/src/assets/scss/elements/switcher";
+// @import "../../../node_modules/idoctor.kz-library/src/assets/scss/elements/tabs";
+// @import "../../../node_modules/idoctor.kz-library/src/assets/scss/elements/tooltip";
+@import "../../../node_modules/idoctor.kz-library/src/assets/scss/elements/badge";
+@import "../../../node_modules/idoctor.kz-library/src/assets/scss/elements/hotspot";
+
+@import "../../../node_modules/idoctor.kz-library/src/assets/scss/elements/list";
+@import "../../../node_modules/idoctor.kz-library/src/assets/scss/elements/heading";
+@import "../../../node_modules/idoctor.kz-library/src/assets/scss/elements/text";
+// @import "../../../node_modules/idoctor.kz-library/src/assets/scss/elements/dropdown";
+@import "../../../node_modules/idoctor.kz-library/src/assets/scss/elements/dropdown";
+// @import "../../../node_modules/idoctor.kz-library/src/assets/scss/elements/alert";
+
+//helpers
+@import "../../../node_modules/idoctor.kz-library/src/assets/scss/helpers/grid";
+@import "../../../node_modules/idoctor.kz-library/src/assets/scss/helpers/spacing";
+@import "../../../node_modules/idoctor.kz-library/src/assets/scss/helpers/divider";
+
+//Стилизация виджета
+@import "modules/widget/base";
+
+
+
+// чтобы в приоритете были эти стили
+@import "components/maps/base";

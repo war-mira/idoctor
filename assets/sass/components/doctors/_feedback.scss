@@ -1,0 +1,173 @@
+.feedback {
+  &--single {
+    padding-bottom: $gap-6;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    .layout {
+      flex-wrap: wrap;
+    }
+    .header--fullpage {
+      padding-top: $gap-4;
+      padding-bottom: $gap-4;
+    }
+  }
+  &--doctor , &--medcenter{
+    flex-basis: 30%;
+    margin: auto;
+    position: relative;
+    margin-top: 100px;
+    padding: 115px $gap-5 $gap-5;
+    margin-bottom: $gap-4;
+    overflow: visible;
+    .reviews--form{
+      &__tags{
+        &-title{
+          margin-bottom:$gap-4;
+          font-size: 15px;
+          width: 100%;
+
+        }
+        &-content {
+          display: flex;
+          flex-wrap: wrap;
+        }
+      }
+    }
+    &_description {
+      width: 100%;
+      padding-bottom: $gap-4;
+
+      .skills--list {
+        a {
+          color: $lavender_grey;
+          text-transform: uppercase;
+          font-size: 12px;
+        }
+      }
+    }
+
+    &_photo {
+      width: 200px;
+      height: 200px;
+      overflow: hidden;
+      border: 2px solid #f4f5fa;
+      box-sizing: border-box;
+      border-radius: $border_radius-100;
+      position: absolute;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+      top: -100px;
+      img {
+        width: 100%;
+      }
+    }
+    &_name {
+      font-size: 20px;
+      font-weight: 700;
+      padding-bottom: $gap-4;
+    }
+    &_container {
+      border-top: 1px solid $azureish_white;
+      padding-top: $gap-4;
+    }
+    .send-btn {
+      width: 100%;
+    }
+    &.hidden{
+      display: none;
+    }
+    &.with-code{
+      padding-top: 0;
+      .feedback--doctor_form{
+        display: none;
+      }
+    }
+  }
+  &__rating {
+
+    &-preheader {
+      margin-bottom: $gap-6;
+      color: $charcoal;
+      text-align: center;
+
+    }
+    .rating--stars {
+      font-size: 22px;
+
+    }
+    .rating{
+      margin-bottom: $gap-4;
+    }
+  }
+  &--note {
+    width: 100%;
+    p {
+      width: 30%;
+      color: $white;
+      font-size: 12px;
+      text-align: center;
+      margin: auto;
+    }
+  }
+  &--top_bg {
+    position: absolute;
+    background-image: url("/img/feedback-top_bg.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    top: 0;
+    right: 0;
+    width: 879px;
+    height: 596px;
+  }
+  &--bottom_bg {
+    position: absolute;
+    background-image: url("/img/feedback-bottom_bg.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    bottom: 0;
+    left: 0;
+    width: 647px;
+    height: 484px;
+  }
+  &--medcenter{
+    padding: 0;
+    margin: auto;
+
+  }
+}
+@media (max-width: 768px) {
+  .feedback {
+    &--doctor, &--medcenter {
+      flex-basis: 100%;
+    }
+    &--medcenter{
+      .reviews--form__stage.show.thanks .reviews--form__medcenter_image{
+        position: relative;
+      }
+    }
+    &--note {
+      p {
+        width: 100%;
+      }
+    }
+    &--top_bg {
+      width: 358px;
+      height: 242px;
+    }
+    &--bottom_bg {
+      width: 358px;
+      height: 242px;
+    }
+  }
+}
+@media (min-width: 768px) {
+  .feedback {
+    &--doctor , &--medcenter{
+      min-width: 400px;
+    }
+  }
+}

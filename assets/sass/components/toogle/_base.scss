@@ -1,0 +1,42 @@
+.display--el {
+    display: none ;
+}
+
+.show--el {
+    display: block ;
+}
+.search--buttons {
+    & .display--toogle {
+        cursor: pointer;
+        display: flex !important;
+        user-select: none;
+    }
+
+    & .hide--toogle {
+        display: none !important;
+    }
+}
+
+@include desktop {
+    .display--toogle {
+        cursor: pointer;
+        display: flex !important;
+        user-select: none;
+    }
+
+    .hide--toogle {
+        display: none !important;
+    }
+    .search--buttons {
+        & .display--toogle {
+            cursor: pointer;
+            display: none !important;
+            user-select: none;
+        }
+
+        & .hide--toogle {
+            display: none !important;
+        }
+    }
+
+}

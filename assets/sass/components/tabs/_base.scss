@@ -1,0 +1,285 @@
+.tabs {
+  position: relative;
+  max-width: 100%;
+
+  &--header {
+    border-bottom: 1px solid $azureish_white;
+    // padding-left: 15px;
+    // padding-right: 15px;
+
+    .swiper {
+      &-container {
+        margin-left: unset;
+        @include desktop {
+          width: 100%;
+          
+          // padding: 0 80px;
+        }
+      }
+    }
+
+    &__item {
+      padding: 15px 0;
+      box-sizing: border-box;
+      cursor: pointer;
+      width: auto;
+      display: flex;
+      align-items: center;
+      height: auto;
+      margin-left: 40px;
+
+      &:first-child{
+        margin-left: 0;
+      }
+
+      h2{
+        font-weight: 500;
+        font-size: 14px;
+        color: $manatee;
+      }
+      .tab--icon{
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: left;
+
+        &__review{
+          background-image: url("/img/icons/reviews.svg");
+          background-size: 15px 15px;
+        }
+        &__about{
+          background-image: url("/img/icons/about.svg");
+          background-size: 11px 15px;
+        }
+        &__about-med{
+          background-image: url("/img/icons/hospital.svg");
+          background-size: 11px 15px;
+        }
+        &__workTimes{
+          background-image: url("/img/icons/schedule.svg");
+          background-size: 12px 15px;
+        }
+        &__disease{
+          background-image: url("/img/icons/heartbeat.svg");
+          background-size: 12px 15px;
+        }
+        &__doctors{
+          background-image: url("/img/icons/doctors.svg");
+          background-size: 11px 15px;
+        }
+        &__services{
+          background-image: url("/img/icons/briefcase-medical.svg");
+          background-size: 12px 15px;
+        }
+        &__gallery{
+          background-image: url("/img/icons/camera.svg");
+          background-size: 12px 15px;
+        }
+      }
+
+
+      &.swiper-slide-thumb-active {
+        
+        border-bottom: 2px solid $dodger_blue;
+        h2{
+          font-weight: 600;
+          line-height: normal;
+          font-size: 14px;
+          color: $dodger_blue;
+        }
+        .tab--icon{
+          &__review{
+            background-image: url("/img/icons/reviews_active.svg");
+          }
+          &__about{
+            background-image: url("/img/icons/about_active.svg");
+          }
+          &__about-med{
+            background-image: url("/img/icons/hospital_active.svg");
+          }
+          &__workTimes{
+            background-image: url("/img/icons/schedule_active.svg");
+          }
+          &__disease{
+            background-image: url("/img/icons/heartbeat_active.svg");
+          }
+          &__doctors{
+            background-image: url("/img/icons/doctors_active.svg");
+          }
+          &__services{
+            background-image: url("/img/icons/briefcase-medical_active.svg");
+          }
+          &__gallery{
+            background-image: url("/img/icons/camera_active.svg");
+          }
+        }
+      }
+
+
+    }
+  }
+  &--content{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    flex-basis: 100%;
+  }
+  &--body {
+    position: relative;
+    max-width: 100%;
+    padding-top: 30px;
+
+    &__medcenter{
+      .tabs-swiper-container{
+        padding-right: 0;
+        padding-left: 0;
+        @include desktop {
+          padding-right: 20px;
+          padding-left: 20px;
+        }
+      }
+    }
+    &__doctor {
+      .tabs-swiper-container {
+        padding-right: 0;
+        padding-left: 0;
+
+        @include desktop {
+          padding-right: 20px;
+          padding-left: 20px;
+        }
+      }
+    }
+    
+  }
+
+  &--element {
+    position: relative;
+    max-width: 100%;
+    padding: 0 15px 15px;
+    box-sizing: border-box;
+
+
+    &__btn{
+      justify-content: center;
+
+      .btn{
+        width: 100%;
+      }
+    }
+
+    &__header{
+      flex-wrap: nowrap;
+      padding-bottom: 30px;
+      align-items: center;
+      h2{
+        padding-right: 15px;
+      }
+      .font-normal{
+        color: $manatee;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+      }
+    }
+    &__item{
+      font-size: 15px;
+      color: $dodger_blue;
+      border-bottom: 1px solid $azureish_white;
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 0;
+    }
+
+
+    .load--more {
+      display: none;
+    }
+
+
+    @media (max-width: 768px) {
+      .main--info {
+        overflow: hidden;
+      }
+      .load--more {
+        margin-top: 10px;
+        display: block;
+      }
+    }
+  }
+  &--tops{
+    padding: 0;
+    background-color: transparent;
+  }
+}
+
+@include desktop{
+  .tabs {
+    &--header{
+      padding: 0;
+      &__item{
+        margin-left: 80px;
+
+        &:first-child{
+          margin-left: 0;
+        }
+      }
+    }
+    &--body {
+      width: calc((100%/3)* 2);
+      flex-basis: calc((100%/3)* 2);
+      padding-top: 60px;
+      padding-right: 30px;
+      // padding: 0 30px;
+      // padding-top: 60px;
+
+      &.fullwidth{
+        width: 100%;
+        flex-basis: 100%;
+      }
+    }
+
+    &--element {
+      padding: 0;
+      //padding-top: 60px;
+
+      &__btn{
+        padding-top: 15px;
+        
+        .btn{
+          width: auto;
+        }
+        
+      }
+
+      &__header{
+        display: flex;
+        flex-wrap: wrap;
+
+       }
+    }
+    &--content{
+      display: flex;
+      flex-wrap: nowrap;
+    }
+    &--tops{
+      padding: 80px 5px 15px 20px;
+      background-color: $white;
+      width: calc(100%/3);
+    }
+  }
+  .tabs-swiper-container{
+    .tabs--element{
+      &.swiper-slide{
+        opacity: 0;
+      }
+      &.swiper-slide-active{
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@import "schedule";

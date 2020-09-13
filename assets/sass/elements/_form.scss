@@ -1,0 +1,21 @@
+.form{
+  display: flex;
+  flex-basis: 100%;
+  flex-wrap: wrap;
+  &--item{
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    margin-bottom:15px;
+    label{
+      //ui kit перекрывает
+      // flex-basis: 100%;
+      font-weight: bold;
+      font-size: 12px;
+      text-transform: uppercase;
+      color: $charcoal;
+      margin-bottom:5px;
+    }
+
+  }
+}

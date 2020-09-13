@@ -1,0 +1,88 @@
+.illnesses {
+  padding: 0;
+  &--head,
+  &--body {
+    max-width: 1600px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    overflow-x: hidden;
+  }
+
+  &--head {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+    flex-wrap: wrap;
+    @include desktop {
+      flex-wrap: unset;
+      padding: 0 80px;
+      padding-bottom: 30px;
+      padding-top: 30px;
+    }
+    @extend .text-5, .manatee;
+    &__title {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      @include desktop {
+        flex-wrap: unset;
+      }
+    }
+    &__info {
+      margin-left: 0;
+      padding: 10px 0 15px;
+      @include desktop {
+        margin-left: 20px;
+        padding: unset;
+      }
+    }
+    .search--head__input {
+      margin-bottom: 0;
+    }
+  }
+  &--body {
+    min-height: 50vh;
+    padding: 20px 15px;
+    @include desktop {
+      padding: 0 80px;
+      padding-bottom: 40px;
+      padding-top: 30px;
+    }
+  }
+  &--list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    @include desktop {
+      flex-wrap: unset;
+    }
+    &_column {
+      box-sizing: border-box;
+      width: 100%;
+      @include desktop {
+        width: 33%;
+      }
+    }
+  }
+  &--item {
+    display: block;
+    word-break: break-all;
+  }
+  .bg-white {
+    border-top: 1px solid $lavender_grey;
+    background-color: $ghost_white;
+    @include desktop {
+      border-top: none;
+      background-color: $white;
+    }
+  }
+  .bg-ghost_white {
+    background-color: $white;
+    @include desktop {
+      background-color: unset;
+    }
+  }
+}

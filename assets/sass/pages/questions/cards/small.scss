@@ -1,0 +1,24 @@
+.questions-card {
+  &__small {
+    padding: 15px 20px;
+
+    .questions-card__title {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 160%;
+    }
+
+    .questions-card__footer {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      a {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: $dodger_blue;
+      }
+    }
+  }
+}

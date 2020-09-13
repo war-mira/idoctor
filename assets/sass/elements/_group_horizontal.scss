@@ -1,0 +1,29 @@
+.group {
+  &--horizontal {
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid $azureish_white;
+
+    &__item {
+      padding-right: 33px;
+      padding-left: 33px;
+      padding-bottom: 0;
+      a {
+        font-size: 14px;
+        font-weight: 500;
+        color: $manatee !important;
+        padding-bottom: 15px;
+
+        &:hover {
+          color: $dodger_blue !important;
+          font-weight: 600;
+        }
+        &:active {
+          color: $dodger_blue !important;
+          font-weight: 600;
+          border-bottom: 2px solid $dodger_blue;
+        }
+      }
+    }
+  }
+}

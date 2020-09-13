@@ -1,0 +1,46 @@
+.toastr{
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10001;
+  @media(max-width:768px){
+    bottom:0;
+    top:initial;
+  }
+  &__container{
+    position: relative;
+    margin:10px;
+  }
+  &__message{
+    color:$white;
+    padding: $gap-3;
+    max-width:350px;
+    margin-bottom:$gap-2;
+    display: flex;
+    @media(max-width: 768px){
+      max-width: 100%;
+    }
+    .fa{
+      margin-left:$gap-2;
+    }
+    &.info{
+      background-color: #9c27b0;
+    }
+
+    &.success {
+      background-color: #4caf50
+    }
+
+    &.warning {
+      background-color: #ff9800
+    }
+
+    &.danger {
+      background-color: #e51c23
+    }
+    &.hide{
+      opacity: 0;
+      transition: opacity .3s ease-in-out;
+    }
+  }
+}

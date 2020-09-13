@@ -1,0 +1,21 @@
+i.fas, svg{
+  &.icon--right{
+    position: relative;
+    left: 20px;
+  }
+}
+
+.burger{
+  display: inline;
+  position: relative;
+  padding: 0;
+  span{
+    display: block;
+    border-bottom:2px solid $maastricht_blue;
+    margin-bottom:5px;
+    width: 23px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+} 

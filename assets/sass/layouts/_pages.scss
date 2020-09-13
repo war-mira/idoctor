@@ -1,0 +1,49 @@
+.layout {
+  &--pages {
+    .mainpage--skills {
+      padding: 30px 0;
+
+      &__content {
+        flex-wrap: wrap;
+
+        &-column {
+          width: 100%;
+        }
+      }
+    }
+
+    main {
+      position: relative;
+      max-width: 100%;
+      width: 100%;
+      overflow: unset;
+      
+      .articles{
+        width:100%;
+        .row{
+          width: 100%;
+          @media(max-width:768px){
+            flex-wrap:wrap;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+@include desktop {
+  .layout {
+    &--pages {
+
+      .mainpage--skills {
+        &__content{
+          &-column {
+            width: calc(100% / 3);
+          }
+        }
+      }
+    }
+
+  }
+}

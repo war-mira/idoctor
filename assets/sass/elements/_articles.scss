@@ -1,0 +1,252 @@
+.articles {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 15px;
+
+  &.mainpage--articles__content {
+    .row {
+      @media(min-width: 768px) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 30px;
+        grid-row-gap: 30px;
+      }
+    }
+  }
+  .card {
+    width: 100%;
+    margin-bottom: 15px;
+
+    &__opacity {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .btn--ghost {
+    position: absolute;
+    z-index: 2;
+    color: $white;
+    display: none;
+    &:hover {
+      color: $dodger_blue;
+    }
+  }
+  &--group {
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+.article,
+.illness {
+  &--card {
+    .tag {
+      position: absolute;
+      z-index: 2;
+      top: 20px;
+      left: 20px;
+    }
+    .btn--ghost {
+      position: absolute;
+      z-index: 2;
+      color: $white;
+      display: none;
+    }
+    &:hover .card__image_block {
+      filter: blur(4px);
+    }
+    &:hover .card__opacity {
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+    &:hover .btn--ghost {
+      display: flex;
+    }
+  }
+
+  &--text {
+    line-height: 25px;
+    font-size: 16px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    h2 {
+      margin-bottom: 25px;
+      margin-top: 30px;
+      line-height: normal;
+    }
+    &_quote {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+  }
+  &--image {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+    &_block {
+      z-index: 0;
+    }
+  }
+  &--social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .tag {
+      margin-bottom: 5px;
+    }
+  }
+  &--author {
+    margin-top: 30px;
+  }
+  &--near {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+
+    &_pointer {
+      font-weight: 500;
+      line-height: 18px;
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    &_text {
+      padding-right: 15px;
+      padding-left: 15px;
+      z-index: 3;
+      align-self: center;
+    }
+
+    &_prev,
+    &_next {
+      width: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      color: $white;
+      min-height: 300px;
+
+      .card__image_block {
+        padding-bottom: 0%;
+        height: 100%;
+      }
+      .card__opacity {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 2;
+        background: linear-gradient(
+          to top rgba(0, 0, 0, 0.3),
+          rgba(0, 0, 0, 0.3)
+        );
+      }
+      .card__image {
+        align-items: center;
+        position: absolute;
+        height: 100%;
+      }
+    }
+
+    &_prev {
+      text-align: right;
+    }
+    &_next {
+      text-align: left;
+    }
+  }
+  &--header{
+    padding-bottom: 30px;
+    flex-basis: 100%;
+    border-bottom: 1px solid $azureish_white;
+    &__info{
+      color:$manatee;
+      font-size: 12px;
+      margin-top:15px;
+      &-date{
+        margin-right:30px;
+      }
+      &-views{
+        display: flex;
+        align-items: center;
+
+        i{
+          font-size:14px;
+          margin-right: 5px;
+        }
+        &-count{
+          font-weight: 500;
+          font-size: 14px;
+          color:$charcoal;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+  &--upload_btn {
+    width: 100%;
+    margin-top: 15px;
+  }
+  .share{
+    margin-bottom: 10px;
+    justify-content: flex-end;
+  }
+}
+@media (min-width: 768px) {
+  .article,
+  .illness {
+    &--info__share {
+      display: flex;
+      justify-content: flex-end;
+      .share__title {
+        margin-right: 10px;
+      }
+    }
+    &--header {
+
+
+    }
+    &--near {
+      flex-wrap: nowrap;
+      &_text {
+        padding-right: 56px;
+        padding-left: 56px;
+        width: 100%;
+      }
+      &_prev,
+      &_next {
+        min-height: 400px;
+      }
+    }
+  }
+
+  .articles {
+    flex-wrap: nowrap;
+    .card {
+      margin-right: 30px;
+      margin-bottom: 15px;
+    }
+    &--group {
+      margin-right: 30px;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+  }
+}
+.article_sidebar {
+  position: relative;
+
+  .fix-menu {
+    position: fixed;
+    top: 0;
+    transition: top 1s linear;
+  }
+}

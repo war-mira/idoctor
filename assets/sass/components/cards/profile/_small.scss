@@ -1,0 +1,84 @@
+.profile--small{
+    flex-wrap: wrap;
+
+    .profile{
+        &--main{
+            flex-basis: 100%;
+            display: flex;
+            background: #FFFFFF;
+            border: 1px solid $carribbean_green;
+            box-sizing: border-box;
+            box-shadow: 0px 5px 15px $shadow-color;
+            border-radius: $border_radius-6;
+            padding: $gap-3;
+            margin-bottom: $gap-3;
+            position: relative;
+        }
+        &--image{
+            width: calc(100% / 3);
+            flex-basis: calc(100% / 3);
+            order: 1;
+            padding-right: $gap-3;
+
+            &__reviews{
+                font-size: 8px;
+                line-height: 9px;
+                width: 100%;
+                text-align: center;
+                display: block;
+            }
+        }
+        &--basic{
+            border-bottom: none;
+            
+            &__container{
+                width: calc((100% / 3) * 2);
+                flex-basis: calc((100% / 3) * 2);
+                order: 2;
+            }
+            &__title{
+                font-weight: 700;
+                font-size: 12px;
+                line-height: 140%;
+            }
+
+        }
+    }
+
+    .isCommercialIcon{
+        position: absolute;
+        width: 29px;
+        height: 29px;
+        background-color: $carribbean_green;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        border-radius: $border_radius-100;
+        right: -5px;
+        top: -5px;
+    }
+
+    .hotspot{
+        font-size: 9px;
+        line-height: 11px;
+        padding: $gap-1 - 2 $gap-1;
+        height: 17px;
+    }
+    .skills{
+        a{
+            font-size: 10px;
+            line-height: 12px;
+        }
+    }
+    .load--more{
+        flex-basis: 100%;
+        width: 100%;
+    }
+
+    @include desktop{
+        &--main{
+            margin-bottom: $gap-2;
+        }
+    }
+}
+

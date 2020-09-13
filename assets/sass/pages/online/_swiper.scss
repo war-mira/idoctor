@@ -1,0 +1,105 @@
+.consultation{
+
+    &--swiper{
+        padding-top: $gap-6;
+        padding-bottom: $gap-6 * 2;
+        margin: 0;
+
+        &__item{
+            background: linear-gradient(90deg, rgba(227, 238, 255, 0.6) 0%, rgba(227, 238, 255, 0.8) 30.55%, #E6F5EE 100%);
+            max-width: 320px;
+            min-height: 340px;
+            padding: $gap-6;
+            
+            &-header{
+                display: flex;
+                align-items: center;
+                padding-bottom: $gap-6;
+            }
+            &-title{
+                font-size: 16px;
+                line-height: 160%;
+                font-weight: 700;
+                padding-left: $gap-4;
+            }
+            &-text{
+                font-weight: 500;
+                font-size: 18px;
+                color: #001B36;
+                line-height: 160%;
+                
+                &.small{
+                    font-size: 15px;
+                }
+            }
+        }
+        .swiper-button-disabled{
+            display: none;
+        }
+    .swiper {
+      &-button {
+        &-next, &-prev {
+          background-image: none;
+          background-color: #fff;
+          width: 50px;
+          height: 50px;
+          box-shadow: 0px 2px 20px rgba(43, 46, 56, 0.2);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          outline: none;
+          @media (max-width: 768px) {
+            width: 40px;
+            height: 40px;
+          }
+
+          svg {
+            @media (max-width: 768px) {
+              height: 11px;
+            }
+          }
+
+          &.swiper-button-disabled {
+            opacity: 0;
+          }
+          &:after{
+            content: "";
+          }
+        }
+
+        &-prev {
+
+        }
+
+      }
+    }
+    &__list{
+      li{
+        padding: 0;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 160%;
+        color: #001B36;
+      }
+    }
+  }
+  @include desktop{
+    &--swiper{
+      margin: 0 -80px;
+      padding-top: $gap-6 * 2;
+
+      .swiper-container{
+          padding: 0 80px;
+      }
+
+      &__item{
+        max-width: 382px;
+
+        &-title{
+            font-size: 18px;
+        }
+      }
+    }
+  }
+}

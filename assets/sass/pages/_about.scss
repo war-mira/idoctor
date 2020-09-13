@@ -1,0 +1,254 @@
+.about {
+  padding-bottom: $gap-6;
+  &--content {
+    padding: $gap-12 $gap-8*2 $gap-12;
+
+    &__heading{
+      padding-bottom: $gap-6;
+    }
+
+    &__top{
+      padding: $gap-6 $gap-8*2 $gap-12;
+    }
+  }
+  &--title{
+    text-align: center;
+  }
+  &--row {
+    display: flex;
+    width: 100%;
+    border: none;
+    flex-wrap: wrap;
+    
+    &_logo {
+      padding-right: $gap-6;
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      order: 1;
+    }
+    &_text {
+      font-weight: normal;
+      line-height: 24px;
+      font-size: 15px;
+      p {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &--card {
+    padding: $gap-11 95px;
+    width: 100%;
+    background: $white;
+
+    &_icon {
+      font-size: 45px;
+    }
+
+    &:hover,
+    &:active {
+      box-shadow: 0px 5px 10px $shadow-color_secondary;
+      position: relative;
+    }
+    &_subtitle {
+      font-size: 21px;
+      padding-top: $gap-4 + 2;
+      font-weight: 500;
+      color: $maastricht_blue;
+    }
+    &_text {
+      margin-top: $gap-4;
+    }
+    &_small {
+      background-color: $ghost_white;
+      width: 100%;
+      color: $maastricht_blue;
+      position: relative;
+      padding: $gap-9 $gap-6;
+      margin-right: $gap-6;
+      color: $maastricht_blue;
+      font-size: 22px;
+      font-weight: 500;
+      height: 223px;
+      box-sizing: border-box;
+      margin-bottom: $gap-10;
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+
+      i {
+        font-size: 60px;
+        color: $azureish_white;
+        position: absolute;
+        right: 24px;
+        bottom: 30px;
+      }
+    }
+  }
+  &_number {
+    font-weight: 700;
+    line-height: normal;
+    font-size: 60px;
+    position: absolute;
+    top: -40px;
+  }
+  &--partners {
+    color: $white;
+    display: inline-block;
+    padding-bottom: $gap-7;
+    &_text {
+      line-height: normal;
+      font-size: 14px;
+    }
+    &_preheader {
+      margin-top: $gap-8;
+      font-weight: 500;
+      line-height: normal;
+      font-size: 20px;
+      margin-bottom: 0;
+    }
+  }
+  &--partner {
+    .about_number {
+      position: relative;
+    }
+  }
+  &--steps {
+    display: flex;
+    .about--content {
+      width: 100%;
+      align-items: center;
+    }
+    &_number {
+      line-height: normal;
+      font-size: 80px;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.3);
+      padding-right: $gap-4;
+      font-weight: 700;
+    }
+    &_text {
+      line-height: normal;
+      font-size: 22px;
+      color: $white;
+      width: 85%;
+    }
+  }
+  &--first_text {
+    order: 2;
+  }
+  &--second_text {
+    order: 3;
+  }
+  &--contacts{
+    padding: 0;
+    h2{
+      padding-bottom: $gap-6;
+    }
+    .contacts--content{
+      padding: 0 $gap-3 $gap-6;
+    }
+  }
+  @include desktop{
+    &--content{
+      &__heading{
+        padding-bottom: $gap-10 * 2;
+      }
+    }
+    padding-bottom: $gap-12;
+    &--card{
+      width: 50%;
+      &_small{
+        &:last-child{
+          margin-right: 0;
+        }
+      }
+      &.bordered--right {
+          border-right: 1px solid $azureish_white;
+        }
+        
+    }
+    &--row{
+      flex-wrap: nowrap;
+      &.bordered--bottom{
+        border-bottom: 1px solid $azureish_white;
+      }
+      &_first {
+        display: grid;
+        grid-template-areas: "about_logo about_first" "about_logo about_second";
+        grid-template-columns: 25% 75%;
+      }
+      &_logo {
+        grid-area: about_logo;
+      }
+    }
+    &--first_text {
+      grid-area: about_first;
+      padding: $gap-6 0;
+    }
+    &--second_text {
+      grid-area: about_second;
+    }
+    &--contacts{
+      display: flex;
+      padding: 0 $gap-8*2 $gap-12;
+
+      .contacts--content{
+        padding: 0;
+      }
+  }
+}
+
+  @media (max-width: 768px){
+    &--content {
+      padding: 30px $gap-3;
+      &--content{
+        padding: 0 $gap-3 $gap-6;
+      }
+    }
+    &--title{
+      text-align: left;
+    }
+    &--row {
+      &_logo {
+        padding-right: 0;
+        order: 2;
+        padding-bottom: $gap-6;
+        padding-top: $gap-6;
+        img {
+          width: 50%;
+          &:first-child {
+            padding-right: $gap-6;
+          }
+        }
+      }
+    }
+    &--card {
+      padding: $gap-6;
+      border: none;
+      margin-bottom: $gap-3;
+      &_subtitle {
+        font-size: 20px;
+      }
+      &_icon {
+        line-height: 15px;
+      }
+    }
+    &--steps {
+      flex-wrap: wrap;
+      &_text {
+        width: 75%;
+      }
+    }
+
+    &--first_text {
+      order: 1;
+      padding-top: $gap-6;
+    }
+    &--second_text {
+      order: 3;
+    }
+  }
+}

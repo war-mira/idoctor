@@ -1,0 +1,29 @@
+.gallery{
+    margin-bottom: $gap-4;
+    .swiper-container{
+        height: 241px;
+    }
+    .swiper-slide{
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .swiper-pagination-bullet{
+        background-color: $ghost_white;
+        opacity: 1;
+    }
+    .swiper-button-prev, .swiper-button-next{
+        background-color: $white;
+        border-radius: $border_soft-rounded;
+        border: 1px solid $lavender_grey;
+        padding: $gap-3 - 2 $gap-3 $gap-3 - 2 $gap-3 - 1;
+        background-image: none;
+        i{
+            color: $manatee;
+        }
+    }
+    .swiper-button-disabled{
+        display: none;
+    }
+}

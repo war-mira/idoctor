@@ -1,0 +1,286 @@
+.search {
+  padding: 0;
+
+  &--head, &--filter__block, &--list, &--buttons, &--pagination {
+    padding: 0 15px;
+  }
+
+  &--head {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+    &__buttons {
+      display: none;
+    }
+
+    &__title {
+      color: $charcoal;
+      display: flex;
+      flex-basis: 100%;
+      flex-wrap: wrap;
+
+      .hotspot {
+        margin-left: 15px;
+        white-space: nowrap;
+        @media (max-width: 768px) {
+          display: none;
+        }
+      }
+
+      &__info {
+        padding-bottom: 30px;
+      }
+
+      &__filter {
+        display: none;
+      }
+
+      @media (max-width: 768px) {
+        padding-top: 10px;
+
+        &__title {
+          padding-top: 20px;
+        }
+      }
+    }
+
+    &__input {
+      margin-left: auto;
+      background-color: $white;
+      border-color: $lavender_grey;
+      align-self: center;
+      flex-basis: 25%;
+    }
+
+    &__info {
+      padding: 5px 0 15px 0;
+      font-size: 12px;
+      color: $manatee;
+      margin-bottom: 15px;
+      flex-basis: 100%;
+    }
+
+  }
+
+  &--list {
+    display: flex;
+    flex-wrap: wrap;
+
+    & > h2 {
+      margin-bottom: 15px;
+    }
+
+    &__item {
+      flex-basis: 100%;
+      margin-bottom: 20px;
+
+    }
+
+    &__buttons {
+      display: none;
+    }
+
+  }
+
+  &--pagination {
+    display: flex;
+    justify-content: center;
+
+
+    @include desktop {
+      height: 36px;
+    }
+
+    [data-action="loadMore"] {
+      display: none;
+    }
+  }
+
+  &--skill-description {
+    padding: 15px;
+    margin-bottom: 0;
+
+    .skill-description--content {
+      &.hidden {
+        display: none;
+      }
+    }
+
+    .toggle__descr {
+      font-size: 12px;
+      line-height: 15px;
+      color: $dodger_blue;
+      cursor: pointer;
+      display: inline;
+    }
+  }
+
+  .skill-description {
+    &__bottom {
+      padding: 0;
+      font-size: 12px;
+      line-height: 15px;
+      color: $manatee;
+    }
+  }
+
+}
+
+@media (min-width: 768px) {
+  .search {
+    &--head, &--list, &--filter__block, &--skill-description {
+      padding: 0 80px;
+    }
+
+    &--skill-description {
+      margin-bottom: 0;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+
+    }
+
+    &--list {
+      padding-top: 20px;
+
+      & > h2 {
+        margin-bottom: 20px;
+      }
+    }
+
+    &--head {
+      padding-top: 30px;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: space-between;
+
+      &__title {
+        line-height: 35px;
+        display: flex;
+        flex-basis: auto;
+        align-items: baseline;
+        padding-right: 10px;
+      }
+
+      &__info {
+        flex-basis: auto;
+        padding: 0;
+        margin-bottom: 0;
+        padding-left: 15px;
+      }
+
+
+    }
+
+    &--skill-description {
+      .skill-description--content {
+        padding: 10px 0;
+        width: 94%;
+      }
+
+      .toggle__descr {
+        width: 6%;
+        text-align: right;
+      }
+    }
+  }
+}
+
+@media(max-width: 768px) {
+
+  .search {
+    &--head {
+      &__title {
+        flex-basis: 100%;
+        order: 1;
+        flex-wrap: wrap;
+
+        h1 {
+          font-size: 24px;
+        }
+      }
+
+      &__input {
+        flex-basis: 100%;
+        order: 3;
+        margin-bottom: 10px;
+
+      }
+
+      &__info {
+        flex-basis: 100%;
+        order: 2;
+        margin-bottom: 0;
+      }
+
+      &__buttons {
+        flex-basis: 100%;
+        order: 4;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .btn {
+          width: 100%;
+          padding: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          letter-spacing: 1px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+    &--list {
+      h2 {
+        margin-top: 20px;
+      }
+
+      &__item {
+        margin-bottom: 15px;
+      }
+
+    }
+
+    &--pagination {
+      .pagination {
+        display: none;
+      }
+
+      [data-action="loadMore"] {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.skill-description {
+
+  .footer--title {
+    font-weight: 600;
+    font-size: 14px;
+    color: $maastricht_blue;
+    display: flex;
+    width: 100%;
+
+    i {
+      margin-right: 10px;
+    }
+  }
+
+  .footer--content {
+    width: 100%;
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+  }
+}

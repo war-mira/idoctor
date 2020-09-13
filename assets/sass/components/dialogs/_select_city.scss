@@ -1,0 +1,129 @@
+.select--city {
+  background: $white;
+  box-shadow: 0px 2px 6px $shadow-color_secondary;
+  padding-top: $gap-3;
+  position: relative;
+  height: 100%;
+
+  @include tablet {
+    padding: $gap-6;
+    border-radius: $border_soft-rounded;
+    height: auto;
+  }
+
+  &__width {
+    min-width: 60%;
+    height: 50vh;
+    @include tablet {
+      height: initial;
+    }
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: $gap-4;
+    position: relative;
+    padding: 0 15px;
+
+    @include tablet {
+      flex-wrap: nowrap;
+      align-items: center;
+      margin-bottom: $gap-10;
+      padding: 0;
+    }
+
+    .input--wrapper {
+      width: 100%;
+      @include tablet {
+        width: 50%;
+      }
+    }
+
+    label {
+      font-size: 16px;
+      line-height: 20px;
+      margin-bottom: $gap-3;
+      font-weight: bold;
+      color: $manatee;
+      @include tablet {
+        margin-right: $gap-6;
+        margin-bottom: 0;
+      }
+    }
+
+  }
+
+  &__list {
+    position: relative;
+    @include tablet {
+      column-count: 3;
+    }
+
+    &-item {
+      font-weight: 600;
+      text-transform: uppercase;
+      -webkit-column-break-inside: avoid;
+      column-break-inside: avoid;
+      border-bottom: 1px solid $azureish_white;
+      list-style: none;
+      color: $maastricht_blue;
+      @include tablet {
+        border-bottom: none;
+      }
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    &-default {
+      padding: 0;
+      .select--city__list-item {
+        display: flex;
+        padding: 0;
+        & a {
+          padding: $gap-4 $gap-3;
+          width:100%;
+          color: $maastricht_blue;
+        }
+        
+        @include tablet {
+          & a {
+            padding: $gap-2 - 2 0;
+            width: fit-content;
+          }
+        }
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+    overflow: scroll;
+    height: calc(100% - 100px);
+    @include tablet {
+      overflow: unset;
+      height: inherit;
+    }
+    & {
+      .select--city__list-item {
+        display: flex;
+        padding: 0;
+        & a {
+          padding: $gap-4 $gap-3;
+          width:100%;
+          color: $maastricht_blue;
+        }
+
+        @include tablet {
+          & a {
+            padding: $gap-2 - 2 0;
+            width: fit-content;
+          }
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,24 @@
+.multisearch {
+  position: relative;
+
+  &__options {
+    position: absolute;
+    width: 100%;
+    background-color: $white;
+    z-index:20;
+    display: none;
+    max-height: 400px;
+    overflow: auto;
+    li{
+      cursor: pointer;
+    }
+    &.show{
+      display: block;
+      padding: $gap-3;
+      box-sizing: border-box;
+      border-radius: 0 0 $border_soft-rounded $border_soft-rounded;
+      box-shadow: 0px 2px 6px $shadow-color_secondary;
+    }
+
+  }
+}

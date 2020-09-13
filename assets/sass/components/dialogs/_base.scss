@@ -1,0 +1,94 @@
+.dialog {
+  border: none;
+  padding: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  display: none;
+
+  &--top {
+    top: 0;
+    bottom: unset;
+  }
+
+  &.fixed {
+    position: fixed;
+  }
+
+  &--background {
+    content: " ";
+    display: none;
+    z-index: -1;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  &--open {
+    display: block;
+    z-index: 99;
+
+    .dialog--background {
+      display: block;
+    }
+  }
+
+}
+
+.open--dialog {
+  cursor: pointer;
+}
+
+@media(max-width: 768px) {
+  .dialog {
+    bottom: 0;
+    position: fixed;
+
+    &--top {
+      top: 100px;
+      bottom: unset;
+    }
+  }
+}
+
+@media(min-width: 768px) {
+  .dialog {
+    top: 100px;
+
+    &--top {
+      top: $gap-12;
+      bottom: unset;
+    }
+  }
+}
+
+@include desktop {
+  .dialog {
+    top: 100px;
+
+    &--top {
+      top: 0;
+      bottom: unset;
+    }
+  }
+}
+
+@include tablet {
+  .dialog {
+    top: 170px;
+
+    &--top {
+      top: 0;
+      bottom: unset;
+    }
+  }
+}
+
+@import "select_city";
+@import "related-premium";

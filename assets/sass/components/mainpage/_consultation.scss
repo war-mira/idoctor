@@ -1,0 +1,93 @@
+.mainpage{
+
+    &--consultation{
+        position: relative;
+        min-height: 320px;
+
+        &__content{
+            position: absolute;
+            top: 0;
+            height: calc(100% - 5px);
+            width: 100%;
+            padding: $gap-8 $gap-6;
+            background-color: rgba(0, 0, 0, 0.4);
+
+            .mainpage--title{
+                font-size: 28px;
+                line-height: 34px;
+                text-align: left;
+                margin-bottom: 20px;
+            }
+            .mainpage--subtitle{
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 20px;
+
+                span{
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+            }
+            .btn{
+                width: 100%;
+            }
+        }
+    }
+
+    figure{
+        img{
+            width: 100%;
+        }
+    }
+    figure.desktop{
+        display: none;
+    }
+    figure.mobile{
+        display: block; 
+    }
+    @include tablet{
+        figure.mobile{
+            width: 100%;
+            max-height: 250px;
+            overflow: hidden;
+        }
+    }
+
+    @include desktop{
+        figure.desktop{
+            display: block;
+            width: calc(100% + 10px);
+            margin-left: -5px;
+        }
+        figure.mobile{
+            display: none;
+        }
+
+        &--consultation{
+            min-height: unset;
+             
+            &__content{
+
+                .mainpage--title{
+                    text-align: center;
+                    font-size: 30px;
+                    line-height: 37px;
+                    margin-bottom: $gap-3;
+                }
+                .mainpage--subtitle{
+                    justify-content: center;
+                    margin-bottom: $gap-3;
+
+                    span{
+                        font-size: 20px;
+                        line-height: 24px;
+                    }
+                }
+                .btn{
+                    width: auto;
+                }
+            }
+        }
+    }
+}

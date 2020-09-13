@@ -1,0 +1,36 @@
+// Fonts
+//@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+
+// Bootstrap
+//@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+@import '../../../node_modules/idoctor.kz-library/src/assets/scss/normalize';
+@import "fonts";
+@import '../../../node_modules/idoctor.kz-library/src/assets/scss/vars';
+@import '../../../node_modules/idoctor.kz-library/src/assets/scss/media';
+//нужно просмотреть чтоб ничего не сломалось
+// @import "devices";
+@import "../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+$fa-font-display: swap;
+$fa-font-path:"/build/webfonts";
+@import "../../../node_modules/@fortawesome/fontawesome-free/scss/regular";
+@import "../../../node_modules/@fortawesome/fontawesome-free/scss/solid";
+@import "../../../node_modules/@fortawesome/fontawesome-free/scss/brands";
+// нужно удалить
+@import "mixins/grid";
+//
+@import "base";
+@import "../../../node_modules/idoctor.kz-library/src/assets/scss/helpers/typography";
+// не понятно зачем
+@import "modules/errors/main";
+// нужно удалить
+@import "modules/grid/base";
+//
+//не понятно зачем
+@import "modules/slider/base";
+//
+@import "modules/toast/base";
+@import "../../../node_modules/swiper/css/swiper.min.css";
+// @import "helpers/colors";
+@import "../../../node_modules/idoctor.kz-library/src/assets/scss/helpers/colors";
+@import "pages/base";

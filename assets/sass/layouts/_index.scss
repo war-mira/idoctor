@@ -1,0 +1,15 @@
+.layout{
+  &--index{
+    max-width:1920px;
+    padding:0;
+    & > *{
+      position: relative;
+      max-width: 100%;
+    }
+    main{
+      flex-basis: 100%;
+      width: 100%;
+    }
+  }
+}
+

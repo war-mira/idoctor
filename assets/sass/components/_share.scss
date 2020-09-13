@@ -1,0 +1,110 @@
+.share{
+  width: 100%;
+  padding-bottom: $gap-9;
+
+  &__title{
+    color: $dim_gray;
+    font-size: 12px;
+    padding-bottom: $gap-1;
+    text-align: left;
+  }
+
+  &__icons{
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+
+
+    a{
+      &.share__icon--facebook{
+        color: #3B5998;
+      }
+      &.share__icon--twitter{
+        color: #55ACEE;
+      }
+      &.share__icon--whatsapp{
+        color: #25d366;
+      }
+      &.share__icon--telegram{
+        color: #0088CC;
+      }
+      &.share__icon--vk{
+        color: #4C75A3;
+      }
+      &.share__icon--ok{
+        color: #ED812B;
+      }
+    }
+  }
+
+  &__icon{
+    border: 1px solid $azureish_white;
+    box-sizing: border-box;
+    border-radius: $border_radius-6/2;
+    flex-basis: 55px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    &--facebook{
+      color: #3B5998;
+    }
+
+    &--twitter{
+      color: #55ACEE;
+    }
+
+    &--whatsapp{
+      color: #25d366;
+    }
+    &--telegram{
+      color: #0088CC;
+    }
+    &--vk{
+      color: #4C75A3;
+    }
+    &--ok{
+      color: #ED812B;
+    }
+    i{
+      font-size: 15px;
+    }
+  }
+
+  &--static{
+    &__icons{
+      display: flex;
+    }
+    &__icon{
+      border: 1px solid $lavender_grey;
+      box-sizing: border-box;
+      height: 32px;
+      width: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: $border_rounded;
+      margin-right: $gap-2;
+
+      i{
+        color: $manatee;
+      }
+    }
+  }
+
+  @include desktop{
+    padding-bottom: $gap-4;
+
+   &__icons{
+     width: auto;
+   }
+
+    &__icon{
+      flex-basis: 32px;
+      width: 32px;
+      margin-right: $gap-1;
+    }
+  }
+}

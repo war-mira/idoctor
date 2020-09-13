@@ -1,0 +1,25 @@
+.layout{
+  max-width: 1600px;
+  margin:0 auto;
+  padding: 0 80px;
+  box-sizing: border-box;
+  display: flex;
+  overflow-x:hidden;
+  & > *{
+    overflow: hidden;
+  }
+  &.nopadding{
+    padding: 0;
+  }
+}
+
+@media(max-width: 768px){
+  .layout{
+    padding:0 15px;
+  }
+}
+
+@import "index";
+@import "pages";
+@import "basic";
+@import "blog-article";

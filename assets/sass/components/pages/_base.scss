@@ -1,0 +1,48 @@
+.pages{
+  padding: 30px 15px;
+  &--title{
+    font-weight: bold;
+    line-height: normal;
+    font-size: 28px;
+    color:$maastricht_blue;
+    margin-bottom:30px;
+
+    &.hidden{
+      display: none;
+    }
+    &__block{
+      padding-bottom: 15px;
+    }
+    &__tip{
+      font-weight: 500;
+      font-size: 14px;
+      color: $manatee;
+      
+      a{
+        color: $dodger_blue;
+      }
+    }
+  }
+  &--content{
+    padding: 30px 15px;
+  }
+}
+
+@media(min-width: 768px){
+  .pages{
+    padding: 60px 80px;
+
+    &__block{
+      display: flex;
+      align-items: center;
+    }
+    &__tip{
+      padding-left: 15px;
+    }
+    &--content{
+      padding: 30px 0;
+    }
+  }
+}
+
+@import "fix";

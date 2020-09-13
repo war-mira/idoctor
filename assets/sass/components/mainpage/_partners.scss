@@ -1,0 +1,40 @@
+.mainpage--partners{
+  padding: $gap-6 $gap-3;
+  background-color:$white;
+
+  .mainpage--title {
+    margin-bottom: $gap-6;
+  }
+
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &-item{
+      flex-basis: 45%;
+      width:45%;
+      margin-bottom: $gap-4;
+    }
+  }
+}
+@media(min-width: 768px){
+  .mainpage--partners{
+    padding: $gap-12 $gap-8*2;
+    &__list{
+      display: flex;
+      flex-wrap: wrap;
+      &-item{
+        flex-basis: calc(100% / 7);
+        width: calc(100% / 7);
+        margin-bottom: $gap-4;
+        padding:0 $gap-4;
+        &:first-child{
+          padding-left: 0;
+        }
+        &:last-child{
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,88 @@
+.faq {
+  width: 100%;
+
+  &--title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    cursor: pointer;
+  }
+
+  &--item {
+    padding: 0;
+    color: $maastricht_blue;
+    border-bottom: 1px solid $lavender_grey;
+    align-items: start;
+    padding-top: $gap-6;
+    padding-bottom: $gap-6;
+    word-break: break-word;
+
+
+    .faq-icon{
+      &.not-active{
+        display: block;
+      }
+      &.active{
+        display: none;
+      }
+    }
+
+    &-active {
+      border-bottom: 1px solid $dodger_blue;
+
+      .faq--list_item{
+        display: block;
+      }
+      .faq-icon{
+        &.active{
+          display: block;
+        }
+        &.not-active{
+          display: none;
+        }
+      }
+    }
+
+    &__marker{
+      padding-top: $gap-1;
+    }
+    &__content{
+      width: 96%;
+      margin-left: $gap-4;
+    }
+  }
+  &--list {
+    &_item {
+      padding-top: $gap-3;
+      display: none;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 160%;
+    }
+  }
+  &--preheader {
+    text-align: center;
+    font-size: 16px;
+    color: $manatee;
+    font-weight: 500;
+  }
+  &--bottom {
+    color: $charcoal;
+    font-size: 16px;
+    padding-top: $gap-6;
+  }
+
+  @include desktop{
+      &--title {
+        font-size: 20px;
+        line-height: 24px;
+      }
+    &--list{
+      &_item{
+        font-size: 16px;
+        padding-top: $gap-6;
+      }
+    }
+  }
+
+}

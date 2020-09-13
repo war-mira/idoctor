@@ -1,0 +1,104 @@
+.mainpage {
+  &--skills {
+    padding: 30px 0px;
+    @include tablet{
+      padding: $gap-12 $gap-8*2;
+    }
+    background-color: $white;
+    &__row{
+      display: flex;
+      flex-wrap: wrap;
+      width:100%;
+      &.emptyRow{
+        display: none;
+      }
+      &-title{
+        margin-bottom:$gap-2 - 3;
+        flex-basis: 100%;
+      }
+    }
+    &__content{
+      display: flex;
+      .swiper-container {
+        padding: 0 $gap-3;
+        padding-bottom: $gap-4;
+
+        .swiper-pagination {
+          bottom: 0;
+
+        }
+      }
+      @include tablet{
+        .swiper-container {
+          padding: unset;
+
+          .swiper-pagination {
+            bottom: unset;
+
+          }
+        }
+      }
+      &-column{
+        width: 75%;
+        padding-right: $gap-3;
+
+        &:last-child {
+          width: 100%;
+        }
+
+        @include tablet {
+          padding-right: $gap-6;
+          width:calc(100% / 3);
+          &:last-child {
+            width: calc(100% / 3);
+          }
+        }
+
+        &.hidden-column{
+          display: none
+        }
+        &_item{
+          display: flex;
+          align-items: center;
+          padding:$gap-3 0;
+          &:first-child{
+            padding-top:0;
+          }
+
+          &.hidden{
+            display: none
+          }
+          // не нашла на какой странице использектся
+          img{
+            width:64px;
+            height:64px;
+            object-fit: cover;
+          }
+          //
+          &-info{
+            width:calc(100% - 64px);
+            flex-grow: 1;
+            padding-left: $gap-3;
+            a{
+              display: block;
+            }
+            span{
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+    &__footer{
+      a{
+        color:$maastricht_blue;
+        letter-spacing: normal;
+      }
+    }
+    &.compact{
+      .mainpage--skills__content-column_item-info, .mainpage--skills__content-column_item{
+        padding: 0;
+      }
+    }
+  }
+}

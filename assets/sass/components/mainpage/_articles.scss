@@ -1,0 +1,49 @@
+.mainpage{
+  &--articles{
+    padding: 30px 0px;
+    @include tablet {
+      padding: 60px 80px;
+    }
+    .swiper-container{
+      padding-bottom: 20px;
+    }
+    &__content{
+      flex-wrap:wrap;
+      .card--bg img{
+        object-fit: cover;
+      }
+      .swiper-container{
+        padding:0 15px;
+        padding-bottom: 20px;
+        .swiper-pagination{
+          bottom:0;
+          @include tablet {
+            display: none;
+          }
+        }
+      }
+      .swiper-slide{
+        width:80%;
+        @include tablet {
+          width: 25%;
+          padding: 0 15px;
+          &:first-child {
+            padding-left: 0;
+          }
+
+          &:last-child {
+            padding-right: 0;
+          }
+        }
+        .card{
+          height: 100%;
+        }
+        
+      }
+    }
+    &__footer{
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

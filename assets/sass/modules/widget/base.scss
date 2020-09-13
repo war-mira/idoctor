@@ -1,0 +1,20 @@
+@import "search";
+@import "sidebar";
+
+.search--premium, .premium--profiles, .title-with-info,.related-premium__content {
+  & > h2 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    .tooltip {
+      margin-left: 15px;
+    }
+
+    i {
+      font-size: 20px;
+      color: $dodger_blue;
+      line-height: 1;
+    }
+  }
+}

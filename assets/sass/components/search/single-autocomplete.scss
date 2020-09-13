@@ -1,0 +1,28 @@
+.single-autocomplete {
+  position: relative;
+
+  &__options {
+    position: absolute;
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    color: #001B36;
+    overflow-y: scroll;
+    max-height: 150px;
+    z-index: 3;
+    margin-top:5px;
+    &-item {
+      padding: 12px 15px;
+      cursor: pointer;
+      font-size: 14px;
+      line-height: 17px;
+
+      &:hover {
+        background-color: #E3EEFF;
+        font-weight: 600;
+        color: $dodger_blue;
+      }
+    }
+  }
+}

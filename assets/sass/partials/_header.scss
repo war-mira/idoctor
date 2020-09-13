@@ -1,0 +1,111 @@
+.header{
+  &-main{
+    &__left{
+      margin: 0;
+      @include desktop {
+        margin-left: $gap-9;
+      }
+      @include tablet {
+        margin-left: $gap-5;
+      }
+
+      @media (max-width: 768px){
+        overflow: hidden;   
+          
+        .link--dark{
+          .fa-map-marker-alt{
+            margin-left: 0;
+            font-size: 11px;
+          }
+        }
+      }
+    }
+    &__logo{
+      @media (max-width: 768px){
+        flex-basis: 165px;
+      }
+      
+    }
+    &__center{
+      margin: 0;
+      margin-top: $gap-2;
+
+      .input--wrapper {
+        max-width: unset;
+      }
+      @include desktop {
+        flex:1;
+      }
+      @include tablet {
+        margin: 0 $gap-3;
+
+        .input--wrapper {
+          width:100%;
+        }
+      }
+    }
+    &__right{
+      transition: 0.1s;
+      
+      & .burger {
+        & .menu--mobile__close {
+          width: 23px;
+          margin-left: auto;
+        }
+        
+        @include desktop {
+          display: none;
+        }
+      }
+      &-normal{
+        & nav .row {
+          display: none;
+        }
+      }
+      & nav {
+        display:none;
+        justify-content: flex-end;
+        @include desktop {
+          display: flex;
+
+          .align-center{
+            align-items: center;
+
+            .link--dark{
+              width: max-content;
+            }
+          }
+        }
+      }
+    }
+    & header.open{
+      position: fixed;
+      top: 0;
+      @include desktop {
+        position: relative;
+        top: unset;
+      }
+    }
+    & .menu--mobile {
+      @include desktop {
+        display: none;
+      }
+    }
+  }
+  &-above{
+    .dropdown-head img{
+      height:25px;
+      width: 25px;
+    }
+    .dropdown-content img{
+      height:20px;
+      width: 20px;
+    }
+  }
+}
+
+.hiding-text{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

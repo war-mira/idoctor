@@ -1,0 +1,12 @@
+@mixin column_item_width($base,$i) {
+  @if $i == 0{
+    display: none;
+  }
+  width:  $base*$i*1%;
+  flex-basis: $base*$i*1%;
+  box-sizing: border-box;
+  @media (max-width: 768px) {
+    flex-basis: 100%;
+    width:100%
+  }
+}

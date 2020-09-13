@@ -1,0 +1,38 @@
+.breadcrumbs {
+  padding: 10px 0;
+  background: $white;
+  // удалила так как в картах медцентра мешался
+  // z-index: 3;
+  position: relative;
+  ul {
+    flex-wrap: wrap;
+
+    li {
+      color: $dim_gray;
+      font-weight: 400;
+      font-size:12px;
+      padding: 0;
+      a{
+        color: $dim_gray;
+      }
+      .separator {
+        margin: 0 5px;
+      }
+
+      &:hover {
+        font-weight: inherit;
+      }
+
+      &.active {
+        font-weight: 600;
+      }
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+  @include desktop{
+    padding: 22px 0 12px;
+  }
+}

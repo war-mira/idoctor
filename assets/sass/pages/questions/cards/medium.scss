@@ -1,0 +1,43 @@
+.questions-card {
+  &__medium {
+    padding: 20px;
+    .questions-card__link {
+      margin-top: 20px;
+      display: flex;
+      a {
+       width: 100%;
+      }
+    }
+  }
+}
+
+.questions-answer-card__medium {
+  grid-template-columns: 60px calc(100% - 60px);
+  grid-template-areas: "question-answer-image question-answer-info" "question-answer-body question-answer-body";
+  @media (max-width: 768px) {
+    grid-template-columns: 50px calc(100% - 50px);
+    grid-template-areas: "question-answer-image question-answer-info " "question-answer-body question-answer-body";
+  }
+
+  .question-doctor__info {
+    margin-top: 5px;
+  }
+
+  .question-doctor__title {
+    margin-bottom: 5px;
+  }
+
+  .question-doctor {
+    &__image {
+      img {
+        width: 50px;
+        height: 50px;
+        @media(max-width: 768px) {
+          width: 40px;
+          height: 40px;
+        }
+      }
+
+    }
+  }
+}

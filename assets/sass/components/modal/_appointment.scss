@@ -1,0 +1,17 @@
+.modal{
+    &--appointment{
+        form{
+            .code__confirm{
+                display: none;
+            }
+            &.form--sent{
+                .modal__content{
+                    display: none;
+                }
+                .code__confirm{
+                    display: block;
+                }
+            }
+        }
+    }
+}

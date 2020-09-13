@@ -1,0 +1,139 @@
+.online {
+  &--card {
+    box-shadow: 0px 2px 6px $shadow-color_secondary;
+    border-radius: $border_radius-6;
+    overflow: hidden;
+    background-color: $white;
+    width: 100%;
+    &__title {
+      padding: $gap-3;
+      background-color: $dodger_blue;
+      min-height: 75px;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 15px;
+
+      a {
+        color: $white;
+      }
+    }
+
+    &__content {
+      padding: $gap-3;
+
+      &-title {
+        display: flex;
+        align-items: center;
+        margin-bottom: $gap-2;
+
+        & .avatar {
+          width: 36px;
+          height: 36px;
+          & img{
+            object-fit: cover;
+          }
+          
+        }
+
+        .info {
+          flex-grow: 1;
+          padding-left: 15px;
+
+          &__title {
+            display: block;
+            font-weight: 500;
+            line-height: normal;
+            font-size: 12px;
+            color: $maastricht_blue;
+            margin-bottom: $gap-1;
+          }
+        }
+      }
+
+      &-text {
+        line-height: 21px;
+        font-size: 15px;
+        position: relative;
+        min-height: 85px;
+
+        &:before {
+          display: block;
+          font-size: 16px;
+          content: "\f10d";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          font-smoothing: antialiased;
+          font-style: normal;
+          font-variant: normal;
+          text-rendering: auto;
+          line-height: 1;
+          color: $azureish_white;
+          margin-bottom: $gap-2;
+        }
+      }
+    }
+  }
+}
+
+.mainpage {
+  &--online {
+    padding: 30px 0px;
+    @include tablet{
+      padding: 60px 80px;
+    }
+
+    .swiper-button{
+      &-next{
+        display: none;
+        @include tablet {
+          display: block;
+          right: -40px;
+        }
+      }
+      &-prev{
+        display: none;
+        @include tablet {
+          display: block;
+          left: -40px;
+        }
+      }
+    }
+
+    .mainpage--title {
+      margin-bottom: 15px;
+      padding: 0 15px;
+    }
+
+    .mainpage--subtitle {
+      margin-bottom: 30px;
+    }
+
+    &__content {
+      display: flex;
+      position: relative;
+      .swiper-container{
+        padding:0 15px;
+        padding-bottom: 20px;
+        .swiper-pagination{
+          display: block;
+          bottom:0;
+          @include tablet {
+            display: none;
+          }
+        }
+      }
+
+    }
+    &__footer{
+      margin-top: 30px;
+      justify-content: center;
+    }
+    .online {
+      &--card {
+        @include tablet {
+          width: 50%;
+        }
+      }
+    }
+  }
+}

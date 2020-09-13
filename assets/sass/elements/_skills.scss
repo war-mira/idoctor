@@ -1,0 +1,48 @@
+.skills {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 500;
+  &--list {
+    h3{
+      font-weight: 500;
+      font-size: 12px;
+    }
+    &__hidden {
+      display: none;
+    }
+    a{
+      color: $manatee;
+      text-decoration: none;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+    &__item {
+      color: $manatee;
+      line-height: 16px;
+      display: inline-block;
+      text-decoration: none;
+
+      &::after {
+        content: " / ";
+        color: $lavender_grey;
+      }
+      &:last-of-type{
+        &:after {
+          content: "";
+        }
+      }
+    }
+  }
+  &--count {
+    margin-left: 5px;
+    color: $manatee;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills{
+    font-size: 12px;
+  }
+}

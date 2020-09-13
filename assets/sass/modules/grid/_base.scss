@@ -1,0 +1,218 @@
+.section-article__article-header .article__title {
+  @media (max-width: 768px) {
+    margin-bottom: 0px;
+  }
+}
+
+.section-article__content {
+  a {
+    color: $dodger_blue;
+    cursor: pointer;
+  }
+}
+
+.grid {
+  padding: 0;
+
+  &.article-content__main {
+    @media (max-width: 768px) {
+      margin-right: 0;
+    }
+  }
+
+  .col {
+    $k: 2;
+    @while $k <= 12 {
+      &_#{$k} {
+        $i: 0;
+        $base_width: 100 / $k;
+        display: flex;
+        flex-wrap: wrap;
+        @while $i <= $k {
+          *[data-width="#{$i}"] {
+            @include column_item_width($base_width, $i);
+            flex-shrink: 0;
+          }
+          $i: $i + 1;
+        }
+      }
+      $k: $k + 1;
+    }
+  }
+
+  h2 {
+    & + p {
+      margin-top: 0;
+    }
+  }
+
+  &__row {
+    padding: $gap-4 0;
+    &:first-child {
+      padding-top: 0 !important;
+    }
+
+    &:last-child {
+      padding-bottom: 0 !important;
+    }
+  }
+
+  &__column {
+    display: flex;
+    width: 100%;
+    @media (max-width: 768px) {
+      flex-wrap: wrap;
+    }
+
+    &--item {
+      width: 100%;
+
+      & *:first-child {
+        margin-top: 0 !important;
+      }
+
+      & *:last-child {
+        margin-bottom: 0 !important;
+      }
+
+      &__text {
+        p {
+          margin: $gap-4 0;
+        }
+
+        ul,
+        ol {
+          padding-left: $gap-2;
+          li {
+            display: block;
+
+            &:before {
+              content: " ";
+              background-color: $black;
+              width: 5px;
+              height: 5px;
+              border-radius: $border_rounded;
+              margin-right: $gap-2;
+              position: relative;
+              flex-shrink: 0;
+              display: inline-block;
+            }
+          }
+        }
+
+        ol {
+          clear: both;
+          list-style: none;
+
+          li {
+            counter-increment: inst;
+            position: relative;
+
+            &:before {
+              content: counter(inst) ".";
+              font-weight: 700;
+              font-size: 16px;
+              background: none;
+              line-height: normal;
+              height: 18px;
+              margin-right:$gap-3;
+            }
+          }
+        }
+      }
+
+      &__quote {
+        &-important {
+          display: flex;
+          align-items: center;
+          background-color: #f3f3f3;
+          padding: $gap-8 $gap-4 $gap-8 $gap-4;
+          &:before {
+            content: "!";
+            font-weight: 600;
+            font-size: 150px;
+            color: #454545;
+            opacity: 0.3;
+            padding-right: $gap-4;
+            min-width: 40px;
+            line-height: 80px;
+          }
+
+          blockquote {
+            font-size: 15px;
+            font-weight: 600;
+
+            p {
+              font-size: 15px;
+              font-weight: 600;
+            }
+          }
+        }
+
+        &-citate {
+          blockquote {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0;
+
+            .blockquote-content {
+              font-style: italic;
+              flex-basis: 100%;
+              font-size: 26px;
+              line-height: 140%;
+              font-weight: normal;
+
+              p {
+
+              }
+            }
+
+            footer {
+              font-size: 16px;
+              line-height: 20px;
+              color: $manatee;
+              margin-top:$gap-3;
+
+              p {
+                line-height: 19px;
+              }
+            }
+          }
+        }
+      }
+
+      &__frame {
+        display: flex;
+        width: 100%;
+
+        .embed-responsive {
+          width: 100%;
+        }
+      }
+
+      &__image {
+        figure {
+          img {
+            width: 100%;
+            display: block;
+          }
+
+          figcaption {
+            font-weight: 600;
+            font-size: 14px;
+            padding-top: $gap-3;
+            display: block;
+            width: 100%;
+
+            p {
+              font-weight: 600;
+              font-size: 14px;
+              margin: 0;
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

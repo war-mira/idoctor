@@ -1,0 +1,22 @@
+.premium--profiles {
+  padding: 30px 20px;
+  background: linear-gradient(90deg, rgba(227, 238, 255, 0.6) 0%, rgba(227, 238, 255, 0.8) 30.55%, #E6F5EE 100%);
+  @media(max-width: 768px){
+    padding: 30px 15px;
+  }
+  h2 {
+    color: $maastricht_blue;
+    margin-bottom: 10px;
+  }
+
+  &.aside {
+    .idoctor-widget {
+      padding: 0;
+      background: transparent;
+
+      &-body {
+        max-width: 100%;
+      }
+    }
+  }
+}

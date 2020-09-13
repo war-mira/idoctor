@@ -1,0 +1,135 @@
+.questions-card {
+  background-color: #fff;
+  border-radius: 6px;
+
+  &__skill {
+    font-weight: bold;
+    font-size: 11px;
+    line-height: 13px;
+    color: $dodger_blue;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 160%;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: $charcoal;
+  }
+
+  &__desc {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 160%;
+  }
+
+  &__footer {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    color: $manatee;
+    margin-top: 15px;
+
+    ul li {
+      font-size: 12px;
+      line-height: 15px;
+      font-weight: 600;
+      color: $manatee;
+      @media (max-width: 768px) {
+        font-size: 11px;
+        line-height: 13px;
+      }
+
+      i {
+        color: $manatee;
+      }
+
+      &:after {
+        background-color: $manatee;
+        @media (max-width: 768px) {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+  &__link {
+    width: 100%;
+    margin-top: 15px;
+  }
+}
+
+.questions-answer-card {
+
+  display: grid;
+  grid-template-columns: 110px calc(100% - 110px);
+  grid-template-areas: "question-answer-image question-answer-info " "question-answer-image question-answer-info" "question-answer-image question-answer-body";
+  @media (max-width: 768px) {
+    grid-template-columns: 60px calc(100% - 60px);
+    grid-template-areas: "question-answer-image question-answer-info " "question-answer-body question-answer-body";
+  }
+
+
+  &__body {
+    margin-top: 15px;
+    grid-area: question-answer-body;
+    @media(min-width: 768px) {
+      margin-top: 20px;
+    }
+  }
+
+  &__footer {
+    margin-top: 15px;
+  }
+  &__text{
+    font-size: 13px;
+    line-height: 160%;
+  }
+
+  &__likes {
+    font-size: 11px;
+    line-height: 20px;
+  }
+
+  &__vote {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+
+    &-title {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 20px;
+
+    }
+
+    &-actions {
+      display: flex;
+      align-items: center;
+
+      span {
+        width: 60px;
+        text-align: center;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 20px;
+        color: $dodger_blue;
+        cursor: pointer;
+
+        &:first-child {
+          border-right: 1px solid $azureish_white
+        }
+      }
+    }
+  }
+
+  .question-doctor {
+
+  }
+}
+
+@import "small";
+@import "medium";
+@import "large";

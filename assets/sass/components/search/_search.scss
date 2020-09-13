@@ -1,0 +1,174 @@
+.system--search{
+    &__title{
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+        color: $manatee;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        padding: 10px 15px 15px;
+    }
+
+    &__options{
+        position: absolute;
+        background: $white;
+        width: calc(100% + 30px);
+        left: -15px;
+        margin-top: 10px;
+        z-index: 2;
+        height: calc(100vh - 30px);
+        overflow-y: scroll;
+        box-shadow: 0 -5px 5px -5px rgba(47, 83, 151, 0.1);
+
+        &.hidden{
+            display: none;
+        }
+    }
+    &__list{
+        &.list--icon{
+            li{
+                border-bottom: 1px solid $azureish_white;
+                padding: 10px 15px;
+                & a{
+                    width: 100%;
+                }
+
+                &:first-child{
+                    padding: 0 15px 10px;
+                }
+                .avatar{
+                    max-height: 42px;
+                }
+            }
+            .icon-btn--wrapper{
+                span{
+                    font-weight: 600;
+                }
+                .icon-btn--large{
+                    border-radius: 50%;
+                }
+            }
+        }
+        
+    }
+    &__item-icon{
+        width: 15px;
+        height: 15px;
+    }
+    
+    &__line{
+        padding-top: 12px;
+        padding-bottom: 11px;
+    }
+    .search--btn{
+        display: none;
+    }
+
+    .input{
+        .input--right{
+            &.hidden{
+                display: none;
+            }
+        }
+    }
+    &__mainpage{
+        position: relative;
+        padding-bottom: 30px;
+        .system{
+            &--search{
+                margin-left: 0;
+                .input--small{
+                    input{
+                        height: 40px;
+                    }
+                }
+                .search--btn{
+                    height: 50px;
+                }
+                &__options{ 
+                    box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.1);
+                    height: auto;
+                    max-height: 300px;
+                }
+            }
+        }
+    }
+
+    @include desktop{
+        margin-left: 15px;
+
+        &__mainpage{
+            padding-bottom: 40px;
+
+            .system{
+                &--search{
+                    .input--small{
+                        input{
+                            height: 50px;
+                            font-size: 16px;
+                        }
+                    }
+                    .search--btn{
+                        height: 50px;
+
+                        &.hidden{
+                            display: block;
+                        }
+                    }
+                    &__options{
+                        width: calc(100% - 145px);
+                    }
+                }
+            }
+        }
+
+        &__options{
+            border: 1px solid $azureish_white;
+            box-sizing: border-box;
+            box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.1);
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            left: 0;
+            width: calc(100% - 145px);
+            height: auto;
+            max-height: 400px;
+            margin-top: 25px;
+            scrollbar-width: thin;
+
+           &::-webkit-scrollbar {
+                width: 14px;
+                border: 1px solid #DAE2EC;
+                box-sizing: border-box;
+            }
+
+            &::-webkit-scrollbar-track {
+                 background: linear-gradient(90deg, #F8F8F8 0%, #FAFAFA 50.51%, #FAFAFA 100%);
+                //background: blue;
+                
+                
+            }
+            
+            &::-webkit-scrollbar-thumb {
+                background: $manatee;
+                //background: red;
+                border-radius: 12px;
+                border: 4px solid $white;
+            }           
+        }
+        .list--icon{
+            li{
+                padding: 15px 20px;
+            }
+        }
+        .search--btn{
+            display: block;
+            margin-left: 10px;
+            &.hidden{
+                display: none;
+            }
+        }
+        
+        
+
+    }
+}

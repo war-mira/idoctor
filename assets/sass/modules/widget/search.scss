@@ -1,0 +1,18 @@
+.search {
+  &--premium {
+    padding: 20px 15px;
+    background: linear-gradient(90deg, rgba(227, 238, 255, 0.6) 0%, rgba(227, 238, 255, 0.8) 30.55%, #E6F5EE 100%);
+    @media (min-width: 768px) {
+      padding: 30px 80px;
+    }
+
+
+    h2 {
+      color: $maastricht_blue;
+      margin-bottom: 20px;
+      @media (min-width: 768px) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

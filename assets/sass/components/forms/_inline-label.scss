@@ -1,0 +1,33 @@
+.form{
+  &--inline-label{
+
+    .form{
+      &--item{
+        @media (min-width: 768px) {
+          flex-wrap:nowrap;
+        }
+
+        align-items:center;
+        label{
+          flex-basis:auto;
+          width:auto;
+          margin-right: $gap-6;
+        }
+        .select--custom{
+          width: 100%;
+          border: 1px solid $lavender_grey;
+          padding: $gap-2 $gap-2;
+          background-color: $white;
+          border-radius: $border_radius-6;
+          align-items: center;
+          select{
+            width:100%;
+          }
+        }
+      }
+    }
+    &.hidden{
+      display: none;
+    }
+  }
+}

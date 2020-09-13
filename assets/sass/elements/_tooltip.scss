@@ -1,0 +1,58 @@
+.tooltip {
+  position: relative;
+  display: inline-flex;
+
+  &-body {
+    border: 1px solid $azureish_white;
+    box-shadow: 0px 10px 35px $shadow-color_select;
+    font-weight: 500;
+    position: absolute;
+    min-width: 200px;
+    max-width: 400px;
+    background-color: $white;
+    border-radius: 4px;
+    z-index: 9999;
+  }
+
+  &-content {
+    position: relative;
+    line-height: 20px;
+    width: 100%;
+    z-index: 2;
+    padding: 20px;
+    word-break: break-word;
+    box-sizing: border-box;
+    font-size: 12px;
+    color: $maastricht_blue;
+    background-color: $white;
+    border-radius: 4px;
+  }
+
+  &-arrow {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: $white;
+    transform: rotate(45deg);
+    left: -10px;
+    top: 30%;
+    border: 1px solid #dae2ec;
+    z-index: 1;
+  }
+
+  &-box {
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .tooltip {
+    &-body {
+      max-width: 80%;
+      margin: 0 20px;
+    }
+  }
+}

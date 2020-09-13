@@ -1,0 +1,136 @@
+.layout {
+  &--sidebar__left {
+    display: flex;
+    padding: $gap-6 $gap-8*2;
+    flex-wrap: wrap;
+
+    & > * {
+      position: relative;
+      max-width: 100%;
+    }
+
+    aside {
+      padding-right: $gap-3;
+      flex-basis: 25%;
+      flex-shrink: 0;
+      width: 25%;
+    }
+
+    main {
+      padding-left: $gap-3;
+      flex-basis: 75%;
+      width: 75%;
+    }
+
+    &-footer {
+      width: 100%;
+      flex-basis: 100%;
+      background-color: $white;
+      padding: 0;
+      .layout{
+        flex-wrap:wrap;
+        border-top: 1px solid $azureish_white;
+        padding-top: $gap-6;
+        margin-top:$gap-6;
+        margin-bottom: $gap-6;
+        &:first-child{
+          flex-wrap:wrap;
+        }
+      }
+      h2 {
+        font-weight: normal;
+        color: $maastricht_blue;
+        width: 100%;
+        margin-bottom:$gap-3;
+      }
+      .cities--list{
+        width:100%;
+      }
+      .similar-skills--list{
+        display: flex;
+        flex-wrap: wrap;
+
+        .tag{
+          margin-right: $gap-3;
+          margin-bottom: $gap-2;
+        }
+      }
+    }
+  }
+
+  &--sidebar__right {
+    display: flex;
+    padding: $gap-6 $gap-8*2;
+    flex-wrap: wrap;
+
+    & > * {
+      position: relative;
+      max-width: 100%;
+    }
+
+    aside {
+      padding-left: $gap-3;
+      flex-basis: 25%;
+      width: 25%;
+      flex-shrink: 0;
+    }
+
+    main {
+      padding-right: $gap-3;
+      flex-basis: 75%;
+      width: 75%;
+
+    }
+  }
+
+  &--no_padding {
+    padding: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .layout {
+    &--sidebar__left {
+      flex-wrap: wrap;
+      padding: $gap-3;
+
+      aside {
+        padding-right: 0;
+        padding-left: 0;
+        flex-basis: 100%;
+        width: 100%;
+      }
+
+      main {
+        padding-left: 0;
+        padding-right: 0;
+        flex-basis: 100%;
+        box-sizing: border-box;
+        width: 100%;
+      }
+
+      footer {
+        padding: $gap-6 0;
+      }
+    }
+
+    &--sidebar__right {
+      flex-wrap: wrap;
+      padding: $gap-3;
+
+      aside {
+        padding-left: 0;
+        flex-basis: 100%;
+        padding-right: 0;
+        width: 100%;
+      }
+
+      main {
+        padding-left: 0;
+        padding-right: 0;
+        flex-basis: 100%;
+        width: 100%;
+      }
+    }
+  }
+}

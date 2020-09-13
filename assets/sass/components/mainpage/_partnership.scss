@@ -1,0 +1,110 @@
+.mainpage{
+  &--partnership{
+    background-color: $dodger_blue;
+    &__info{
+      padding: $gap-12 $gap-3;
+      color:$white;
+      width:100%;
+      &-steps{
+        margin-top:$gap-12;
+        .step{
+          font-weight: 500;
+          line-height: normal;
+          font-size: 18px;
+          margin-bottom: $gap-8;
+          display: flex;
+          align-items: center;
+          position: relative;
+          img{
+            margin-right:$gap-6;
+            width:64px;
+            height: 64px;
+            max-width: 100%;
+            position: relative;
+            display: block;
+            
+          }
+          span{
+            position:relative;
+            z-index: 2;
+            &:before{
+              content: attr(step);
+              z-index: 1;
+              position: absolute;
+              font-size: 80px;
+              text-align: center;
+              color: rgba(0, 0, 0, 0.08);
+              font-weight: 900;
+              left: -27px;
+              top: -10px;
+              line-height: 1;
+              @media(min-width: 768px){
+                top: -36px;
+                line-height: normal;
+              }
+            }
+          }
+        }
+      }
+      &-title{
+        font-weight: bold;
+        line-height: normal;
+        font-size: 24px;
+      }
+    }
+    &__image{
+      width:100%;
+      position: relative;
+      & img{
+            max-width: 100%;
+            position: relative;
+            height: auto;
+            display: block;
+      }
+
+    }
+  }
+}
+
+@media(min-width: 768px){
+  .mainpage{
+    &--partnership{
+      min-height:450px;
+      display: flex;
+
+      &__info{
+        padding: $gap-12 $gap-4 $gap-8 $gap-8*2;
+
+        width:50%;
+        &-steps {
+          margin-top: $gap-12;
+
+          .step {
+            font-size: 20px;
+            margin-bottom: $gap-4;
+            img{
+              margin-right: $gap-7;
+              width:auto;
+              height: auto;
+            }
+          }
+        }
+        &-title{
+
+          font-size: 28px;
+        }
+      }
+      &__image{
+        width:50%;
+        img{
+          clip-path: polygon(19% 0, 100% 0, 100% 100%, 0% 100%);
+          height: 100% ;
+          object-fit: cover;
+          position: absolute;
+          width: 100%;
+          object-position: top;
+        }
+      }
+    }
+  }
+}

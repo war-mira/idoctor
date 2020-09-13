@@ -1,0 +1,79 @@
+.consultation{
+    &--spec{
+        &__item{
+            width: 100%;
+            padding-bottom: $gap-3;
+
+            &.hidden{
+                display: none;
+            }
+        }
+        &__card{
+            background: #FFFFFF;
+            box-shadow: 0px 5px 15px rgba(50, 50, 93, 0.15);
+            border-radius: 6px;
+            padding: $gap-4;
+        }
+        &__header{
+            color: $french_blue;
+            padding-bottom: $gap-3;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 22px;
+        }
+        &__row{
+            padding-bottom: 13px;
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 16px;
+            color: $dim_gray;
+
+            &.time{
+                padding-bottom: $gap-2;
+            }
+            .btn{
+                width: 100%;
+            }
+        }
+        .online-dot{
+            color: #059E78;
+            
+            &::before{
+                height: 10px;
+                width: 10px;
+                background-color: #059E78;
+                border: 2px solid #E6F5EE;
+                content: "";
+                display: inline-block;
+                border-radius: 50%;
+                margin-right: 3px;
+            }
+        }
+        .online-line{
+            &::before{
+                height: 5px;
+                width: 5px;
+                background-color: $manatee;
+                content: "";
+                display: inline-block;
+                border-radius: 50%;
+                margin-right: $gap-2;
+                margin-left: $gap-2;
+                margin-bottom: 2px;
+            }
+        }
+        &.hidden{
+            display: none;
+        }
+    }
+    @include desktop{
+        &--spec{
+            &__item{
+                padding-bottom: 0;
+            }
+            &__card{
+                padding: $gap-4 $gap-6;
+            }
+        }
+    }
+}

@@ -1,0 +1,49 @@
+.meta-info{
+  ul {
+    display: flex;
+    list-style: none;
+    flex-wrap:wrap;
+    li {
+      margin-right: 15px;
+      display: flex;
+      align-items: center;
+      padding-bottom: 0;
+
+      &:after {
+        display: block;
+        width: 3px;
+        height: 3px;
+        background-color: $maastricht_blue;
+        content: " ";
+        margin-left: 15px;
+        border-radius: 50%;
+        flex-shrink: 0;
+      }
+
+      i {
+        font-size: 10px;
+        margin-right: 5px;
+        line-height: 15px;
+        color: #fff;
+      }
+
+      span {
+        margin-right: 5px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:last-child {
+        &:after {
+          content: none;
+        }
+      }
+    }
+  }
+}
+
+@import "articles/base";
+@import "questions/base";
+@import "online/base"

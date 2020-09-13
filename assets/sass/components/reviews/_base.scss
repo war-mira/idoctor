@@ -1,0 +1,346 @@
+.reviews {
+  position: relative;
+  max-width: 100%;
+
+  .swiper {
+    &-container {
+      .swiper-wrapper {
+        padding: 0;
+      }
+    }
+  }
+  &--header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: $gap-3;
+  }
+  &--title {
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+
+    .font-normal{
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 15px;
+      color: $manatee;
+      padding-left: 0;
+      flex-basis: 100%;
+      padding-top: $gap-1;
+    }
+  }
+  .count--mobile{
+    display: flex;
+    padding-left: 10px;
+  }
+  .count--desktop{
+    display: none;
+  }
+  &--tabs {
+    display: flex;
+    align-items: center;
+    position: relative;
+    max-width: 100%;
+    padding-top: $gap-3;
+
+    &__item {
+      &.btn{
+        min-width: 105px;
+        padding-left: $gap-2;
+        padding-right: $gap-2; 
+        font-weight: 500;
+        font-size: 10px;
+        letter-spacing: normal;
+        margin-right: $gap-3;
+        width: auto;
+        text-transform: unset;
+
+        &:last-child{
+          margin-right: 0;
+        }
+        i {
+          font-size: 18px;
+        }
+      }
+
+      &.reviews--all {
+        font-size: 12px;
+        background: transparent;
+        border: 1px solid $azureish_white;
+        color: $dodger_blue;
+
+        &:active, &:focus{
+          color: $white;
+
+          span{
+            color: $white;
+          }
+        }
+
+        .count--desktop{
+          margin-left: 0;
+        }
+        .count--mobile{
+          padding-left: 0;
+        }
+      }
+
+      &.reviews--positive {
+        color: $carribbean_green;
+
+        i, span{
+            color: $carribbean_green;
+        }
+        &:hover {
+          border-color: $carribbean_green;
+
+          i, span{
+            color: $carribbean_green;
+          }
+        }
+      }
+
+      &.reviews--negative {
+        color: $coral_red;
+
+        i, span{
+          color: $coral_red;
+        }
+        &:hover {
+          border-color: $coral_red;
+
+          i, span{
+            color: $coral_red;
+          }
+        }
+      }
+
+      &.swiper-slide-thumb-active {
+        .count--desktop, .count--mobile,i{
+          color: $white;
+        }
+        color: $white;
+        &:hover{
+          .count--desktop, .count--mobile,i{
+            color: $white;
+          }
+        }
+
+        &.reviews--all {
+          span{
+            color: $white;
+          }
+          background-color: $dodger_blue;
+          border-color: $dodger_blue;
+          color: $white;
+        }
+
+        &.reviews--positive {
+          background-color: $carribbean_green;
+          border-color: $carribbean_green;
+        }
+
+        &.reviews--negative {
+          background-color: $coral_red;
+          border-color: $coral_red;
+        }
+      }
+    }
+    .reviews-swiper-container{
+      overflow: visible;
+    }
+  }
+  &--item {
+    margin-bottom: $gap-3;
+    padding: $gap-2;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &__head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      i {
+        font-size: 18px;
+      }
+      //не нашла
+      b {
+          font-weight: 400;
+      }
+
+
+    }
+    &__footer{
+      .tag{
+        &--container{
+          display: flex;
+          flex-wrap: wrap;
+          padding-top: $gap-2;
+        }
+        margin-bottom: $gap-2 - 2;
+        margin-right: $gap-2 - 2;
+      }
+    }
+    &__replies {
+      &-item {
+        position: relative;
+        display: flex;
+        &:before {
+          display: block;
+          font-size: 14px;
+          content: "\f3e5";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          font-smoothing: antialiased;
+          font-style: normal;
+          font-variant: normal;
+          text-rendering: auto;
+          line-height: 1;
+          color: $dodger_blue;
+          transform: rotate(-180deg);
+          position: absolute;
+          left: -20px;
+          top: 0;
+        }
+
+        .image {
+          flex-basis: 35%;
+          min-width: 36px;
+          max-width: 40px;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .hidden{
+      display: none;
+    }
+    &__rolled{
+
+      .reviews--item__body{
+        height: 66px;
+        overflow: hidden;
+      }
+      
+      .hidden{
+        display: block;
+      }
+    }
+    &__positive{
+      background: $anti-flash_white;
+      border-radius: $border_radius-6;
+    }
+    &__negative{
+      background: #FFF7EC;
+    }
+    &__date{
+      font-size: 10px;
+      line-height: 12px;
+      color: $manatee;
+    }
+  }
+
+  &--tabs {
+    @include desktop{
+
+      &__item{
+        &.btn{
+          min-width: 130px;
+        }
+      }
+      padding-top: 0;
+
+      .swiper-container{
+        width: 100%;
+        padding: 0;
+        padding-left: $gap-3;
+      }
+    }
+  }
+
+  &--body {
+    &__items {
+      min-height: 1px;
+    }
+    &__footer {
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+
+      .btn{
+        width: 100%;
+        margin: auto;
+        margin-bottom: $gap-2;
+      }
+
+      .tag{
+        &--container{
+          padding-top: $gap-3;
+        }
+      }
+    }
+    .swiper-slide {
+      .reviews--body__footer {
+        padding-bottom: 0;
+      }
+    }
+  }
+  &--btns{
+    display: flex;
+    justify-content: center;
+    //padding: 0 15px;
+
+    .btn{
+      width: 100%;
+    }
+  }
+
+  @include desktop{
+    &--header{
+      flex-wrap: nowrap;
+      padding: 0;
+      padding-bottom: $gap-6;
+    }
+    &--title{
+      .font-normal{
+        flex-basis: auto;
+      }
+    }
+
+    &--item{
+      margin-bottom: $gap-4;
+      padding: $gap-6;
+    }
+
+    &--body{
+      &__footer{
+        .btn{
+          width: calc((100% / 8) *3);
+        }
+      }
+    }
+    .count--mobile{
+      display: none;
+    }
+    .count--desktop{
+      margin-left: $gap-2;
+      display: flex;
+    }
+    &--btns{
+      .btn{
+        width: calc((100% / 8) *3);
+      }
+    }
+  }
+
+}
+@import "form";
+@import "dialog";
+@import "receiver";

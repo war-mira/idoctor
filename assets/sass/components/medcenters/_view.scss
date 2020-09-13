@@ -1,0 +1,31 @@
+.view{
+    &--profile__medcenter{
+        .profile{
+            &--basic{
+
+            }
+            &--info{
+                &__jobs{
+                    padding-bottom: 20px;
+                }
+            }
+
+            &--map{
+                padding-top: 20px;
+            }
+        }
+
+        @include desktop{
+            .profile{
+                width: 100%;
+                // padding: 20px 0;
+                &--basic{
+                    padding-bottom: 5px;
+                }
+                &--map{
+                    padding-top: 0;
+                }
+            }
+        }
+    }
+}

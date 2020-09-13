@@ -1,0 +1,104 @@
+$oneSection: calc(100% - (11 * 30px));
+.blog {
+  &-article {
+    &--cards {
+      .blog-article__body {
+        background-color: $french_blue;
+        color: #fff;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        .blog-article__row{
+          width:100%;
+        }
+        a {
+          color: #fff;
+        }
+
+      }
+
+      header {
+        color: #fff;
+
+        .blog-article__centered {
+          border-bottom: 1px solid $azureish_white;
+        }
+      }
+
+      header .summary-footer, .blog-article__text {
+        ul, ol {
+          margin-bottom: 30px;
+
+          li, i {
+            color: #fff;
+
+            &:after {
+              background-color: #fff;
+            }
+          }
+        }
+      }
+
+      .blog-article {
+        &__image {
+          figcaption {
+            color: #fff;
+          }
+        }
+
+        &__important, &__quote {
+          background-color: rgba($dodger_blue, .2);
+        }
+
+        &__card {
+          &-title {
+            padding: 15px 80px;
+            background-color: $dodger_blue;
+            display: flex;
+            margin-bottom: 30px;
+            @media(max-width: 768px) {
+              padding: 15px;
+            }
+
+            &--icon {
+              width: calc(calc(100% - (11 * 30px)) / 12 + 30px);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              @media(max-width: 768px) {
+                margin-right: 15px;
+              }
+            }
+
+            & > h2 {
+              display: flex;
+              align-items: center;
+              margin-left: 0;
+              font-size: 26px;
+              line-height: 180%;
+              @media(max-width: 768px) {
+                font-size: 22px;
+                line-height: 140%;
+                padding: 0;
+              }
+            }
+          }
+
+          &-content {
+            padding: 0 80px;
+
+            a {
+
+              text-decoration: underline;
+            }
+
+            @media(max-width: 768px) {
+              padding: 0 15px;
+            }
+          }
+        }
+      }
+
+    }
+  }
+}

@@ -1,0 +1,160 @@
+.blog {
+  &-article {
+    .summary {
+      position: relative;
+      z-index: 2;
+
+      align-self: flex-end;
+      display: flex;
+      flex-wrap: wrap;
+
+
+      &-header {
+        font-size: 14px;
+        line-height: 17px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        width: 100%;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+      }
+
+      &-partner {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 15px;
+        margin-bottom: 20px;
+        letter-spacing: 1px;
+        width: 100%;
+      }
+
+      h1 {
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 58px;
+        width: calc(100% / 3 * 2);
+        @media(max-width: 768px) {
+          font-size: 30px;
+          line-height: 140%;
+          width: 100%;
+        }
+      }
+
+      &-footer {
+        width: 100%;
+        ul{
+          margin-top:30px;
+        }
+        ul li {
+          font-size: 12px;
+          line-height: 15px;
+          font-weight: 600;
+          padding-bottom: 0;
+          display: flex;
+          list-style: none;
+
+          @media (max-width: 768px) {
+            font-size: 11px;
+            line-height: 13px;
+          }
+
+        }
+      }
+    }
+
+    &__cover {
+      height: 100vh;
+      position: relative;
+      width: 100%;
+      padding: 0;
+      display: flex;
+      color: #fff;
+
+      .summary {
+        padding: 60px 80px;
+        height: 100%;
+        width: 100%;
+        @media(max-width: 768px) {
+          padding: 30px 15px;
+          flex-direction: column;
+          justify-content: flex-end;
+          height: 100%;
+        }
+
+        &-header {
+          @media(max-width: 768px) {
+            flex-grow: 1;
+          }
+        }
+
+        &-footer {
+          align-self: flex-end;
+        }
+      }
+
+      figure {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          @media(min-width: 768px) {
+            object-position: initial !important;
+          }
+
+        }
+
+        &:after {
+          content: " ";
+          width: 100%;
+          height: 100%;
+          display: block;
+          position: absolute;
+          z-index: 1;
+          background-color: rgba(#000, .4);
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .summary-footer {
+        ul {
+          li {
+            color: #fff;
+
+            &:after {
+              background-color: #fff;
+            }
+          }
+        }
+      }
+    }
+
+    header.default {
+      padding: 0;
+      padding-top: 30px;
+
+      .summary h1 {
+        width: 100%;
+      }
+
+      ul {
+        margin-bottom: 0;
+
+        i {
+          color: $maastricht_blue;
+        }
+      }
+
+      .blog-article__row {
+        margin-bottom: 0;
+      }
+    }
+
+
+  }
+}

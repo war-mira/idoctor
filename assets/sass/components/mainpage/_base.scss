@@ -1,0 +1,136 @@
+.mainpage {
+  background-color: #f8f9fa;
+  &--title {
+    font-weight: bold;
+    font-size: 24px;
+    color: $maastricht_blue;
+    a {
+      color: inherit;
+    }
+  }
+  &--subtitle {
+    font-weight: 500;
+    font-size: 14px;
+    color: $manatee;
+  }
+  .swiper {
+    &-container {
+      .swiper-wrapper {
+        padding: 0;
+      }
+    }
+  }
+  &--header {
+    min-height: 80vh;
+    display: flex;
+    background-image: url(/img/mainpage_bg.png);
+    background-position: top right;
+    background-repeat: no-repeat;
+    align-items: center;
+    background-color: $white;
+    background-size: 50%;
+    &__content {
+      padding: $gap-4 $gap-3;
+      width: 100%;
+
+      &-info {
+        &_row {
+          color: $maastricht_blue;
+          line-height: 24px;
+          font-size: 14px;
+          margin-bottom: $gap-3;
+          i,
+          svg {
+            margin-right: $gap-2;
+            font-size: 20px;
+          }
+          b {
+            font-weight: 600;
+            font-size: 24px;
+            margin-right: $gap-2;
+          }
+          &.footer__text {
+            margin-top: $gap-3;
+            font-weight: 500;
+            line-height: 32px;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    h1 {
+      font-weight: bold;
+      font-size: 28px;
+      text-transform: uppercase;
+      color: $dodger_blue;
+      margin-bottom: $gap-7;
+    }
+  }
+  &--head{
+    &__withsearch{
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .mainpage {
+    .swiper {
+      &-container {
+        width: 100%;
+        .swiper-wrapper {
+          padding: 0;
+        }
+      }
+    }
+    &--header {
+      min-height: 80vh;
+      background-size: contain;
+      &__content {
+        padding: $gap-4 $gap-8*2;
+        width: calc((100% / 4) * 3);
+        .mainpage--search {
+          width: calc((100% / 9) * 7);
+        }
+        &-info {
+          &_row {
+            line-height: 24px;
+            font-size: 18px;
+            margin-bottom: $gap-5;
+            i,
+            svg {
+              font-size: 25px;
+            }
+            b {
+              font-size: 30px;
+            }
+            &.footer__text {
+              margin-top: 0;
+              line-height: 38px;
+              font-size: 24px;
+            }
+          }
+        }
+        h1 {
+          font-size: 40px;
+          line-height: inherit;
+        }
+      }
+    }
+  }
+}
+
+.header {
+  &--fullpage {
+    width: 100%;
+  }
+}
+@import "cards";
+@import "consultation";
+@import "search";
+@import "skills";
+@import "articles";
+@import "online";
+@import "partnership";
+@import "partners";

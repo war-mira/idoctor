@@ -1,0 +1,51 @@
+.medcenters--search{
+    padding: 0 15px 15px;
+    padding-bottom: 15px;
+    .search {
+        &--head{
+            position: relative;
+            @media (max-width: 768px){
+                &__title{
+                    padding-top: 20px;
+                }
+            }
+            
+            &__info{
+                padding-bottom: 30px;
+            }
+            &__filter{
+                display:none;
+            }
+            &__line {
+                display: none;
+            }
+        }
+        @media (min-width: 768px){
+            &--head {
+                align-items: center;
+                justify-content: space-between;
+                &__title{
+                    line-height: 35px;
+                    display: flex;
+                    flex-basis: auto;
+                    align-items: baseline;
+                    padding-right: 10px;
+                }
+                &__info{
+                    flex-basis: auto;
+                    padding: 0;
+                    margin-bottom: 0;
+                    padding-left: 15px;
+                }
+                &__wrapper{
+                    display:flex;
+                }
+                
+                &__filter{
+                    display: flex;
+                }
+            }
+        }
+    }
+}
+

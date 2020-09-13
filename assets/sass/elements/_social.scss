@@ -1,0 +1,22 @@
+.social{
+  &--icons{
+    display: flex;
+    width: 100%;
+    &__item{
+      background: #1584EF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width:42px;
+      height:42px;
+      border-radius: $border_rounded;
+      margin-right: $gap-3;
+      i{
+        color:$white;
+      }
+      &:last-child{
+        margin-right:0;
+      }
+    }
+  }
+}

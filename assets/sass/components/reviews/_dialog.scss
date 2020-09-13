@@ -1,0 +1,69 @@
+.dialog{
+  &[data-type="dropReview"], &[data-type="dropReceiver"], &[data-type="dropMedcenterReview"]{
+    @media (max-width: 768px) {
+      width:100%;
+      top: 0;
+      z-index: 10000;
+      bottom: initial;
+    }
+    .reviews--form{
+      background: $white;
+      padding: $gap-6 $gap-3;
+      overflow-y: scroll;
+      max-height: calc(100vh - 55px);
+
+      @media (max-width: 768px) {
+        height: 100vh;
+        max-height: 100vh;
+        padding-bottom: $gap-8*2;
+      }
+
+      &__title{
+        i{
+          float: right;
+          font-size: 18px;
+        }
+      }
+      &__tags{
+        &-title{
+          margin-bottom:$gap-4;
+          font-size: 15px;
+          width: 100%;
+
+        }
+        &-content{
+          display: flex;
+          flex-wrap: wrap;
+        }
+      }
+      &__medcenter{
+        background-color: $dodger_blue;
+        padding: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .dialog{
+    &[data-type="dropReview"], &[data-type="dropReceiver"], &[data-type="dropMedcenterReview"]{
+        top:40px;
+        width: 40%;
+      .reviews--form{
+        border-radius: $border_radius-6;
+        padding: $gap-6;
+        overflow: auto;
+        &__title i {
+          display: none;
+        }
+      }
+    }
+    &[data-type="dropMedcenterReview"]{
+      .reviews--form{
+        padding: 0;
+        max-width: 505px;
+        margin: auto;
+      }
+    }
+  }
+}
